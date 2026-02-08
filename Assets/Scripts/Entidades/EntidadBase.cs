@@ -6,6 +6,9 @@ public class EntidadBase : MonoBehaviour
     public float HP; //Vida de la entidad.
     public float MaxHP; //Vida maxima de la entidad.
     public float Speed; //Velocidad de la entidad.
+    public float NormalSpeed;
+    public float HighSpeed; //Velocidad al ir mas rapido.
+    public float LowSpeed; //Velocidad al agacharse o al ir mas lento.
     [Range(0.0f, 0.5f)] public float MovementSmoothTime; //Suavizado de movomiento.
     public float Damage; //Daño de la entidad.
 

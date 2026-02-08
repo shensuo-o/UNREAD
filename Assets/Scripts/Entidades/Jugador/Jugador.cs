@@ -23,6 +23,11 @@ public class Jugador : EntidadBase
     private Vector2 DirVelocity;
     private Vector3 Velocity;
 
+    private void Awake()
+    {
+        NormalSpeed = Speed; //Set normal speed.
+    }
+
     void Start()
     {
         CharacterController = GetComponent<CharacterController>(); //Setear Character Controller.
@@ -38,6 +43,7 @@ public class Jugador : EntidadBase
     {
         MoveCamara();
         Movement();
+        SprintAndCrouch();
     }
 
     private void MoveCamara() //Movimiento de Camara.
@@ -69,6 +75,22 @@ public class Jugador : EntidadBase
         if(IsGrounded! && CharacterController.velocity.y < -1)
         {
             VerticalVelocity = -8;
+        }
+    }
+
+    private void SprintAndCrouch() //Se utiliza para agacharse y correr. Aca se llamaria a los cambios de animacion y efectos de cada uno.
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Speed = HighSpeed;
+        }
+        else if (Input.GetKey(KeyCode.LeftControl))
+        {
+            Speed = LowSpeed;
+        }
+        else
+        {
+            Speed = NormalSpeed;
         }
     }
 }
