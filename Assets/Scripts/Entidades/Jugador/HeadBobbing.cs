@@ -4,8 +4,8 @@ public class HeadBobbing : MonoBehaviour
 {
     [SerializeField] private bool Enabled = true;
 
-    [SerializeField, Range(0, 0.1f)] private float Amplitud = 0.015f;
-    [SerializeField, Range(0, 30f)] private float Frecuencia = 10f;
+    [Range(0, 0.1f)] public float Amplitud = 0.015f;
+    [Range(0, 30f)] public float Frecuencia = 10f;
 
     [SerializeField] private Transform Camara = null;
     [SerializeField] private Transform CameraHolder = null;
@@ -22,7 +22,16 @@ public class HeadBobbing : MonoBehaviour
 
     void Update()
     {
-
+        if (!Enabled)
+        {
+            return;
+        }
+        else
+        {
+            CheckMotion();
+            ResetPosition();
+            Camara.LookAt(FocusTarget());
+        }
     }
 
     private Vector3 FootStepMotion()
@@ -46,11 +55,24 @@ public class HeadBobbing : MonoBehaviour
             return;
         }
 
-        FootStepMotion();
+        PlayMotion(FootStepMotion());
+    }
+
+    private void PlayMotion(Vector3 motion)
+    {
+        Camara.localPosition += motion;
     }
 
     private void ResetPosition()
     {
-        
+        if (Camara.localPosition == StartPos) return;
+        Camara.localPosition = Vector3.Lerp (Camara.localPosition, StartPos, 1 * Time.deltaTime);
+    }
+
+    private Vector3 FocusTarget()
+    {
+        Vector3 pos = new Vector3 (transform.position.x, transform.position.y + CameraHolder.localPosition.y, transform.position.z);
+        pos += CameraHolder.forward * 15f;
+        return pos;
     }
 }

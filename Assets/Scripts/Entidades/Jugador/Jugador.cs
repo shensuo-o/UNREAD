@@ -23,6 +23,8 @@ public class Jugador : EntidadBase
     private Vector2 DirVelocity;
     private Vector3 Velocity;
 
+    [SerializeField] private HeadBobbing HeadBobbing;
+
     private void Awake()
     {
         NormalSpeed = Speed; //Set normal speed.
@@ -31,6 +33,7 @@ public class Jugador : EntidadBase
     void Start()
     {
         CharacterController = GetComponent<CharacterController>(); //Setear Character Controller.
+        HeadBobbing = GetComponent<HeadBobbing>();
 
         if (CursorLock)
         {
@@ -51,7 +54,7 @@ public class Jugador : EntidadBase
         Vector2 targetMouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")); //Input del movimiento del mouse.
         CurrentMouseDelta = Vector2.SmoothDamp(CurrentMouseDelta, targetMouseDelta, ref CurrentCameraVelocity, MouseSmoothTime); //Calcular el movimiento relativo a la velocidad de la camara y del movmiento del mouse.
         CameraCap -= CurrentMouseDelta.y * MouseSensitivity; //Aplicar sensibilidad.
-        CameraCap = Mathf.Clamp(CameraCap, -90f, 90f); //Clamp para que no se pase de largo la camara en Y.
+        CameraCap = Mathf.Clamp(CameraCap, -85f, 85f); //Clamp para que no se pase de largo la camara en Y.
         Camara.localEulerAngles = Vector3.right * CameraCap; //Mover la camara en Y.
         transform.Rotate(Vector3.up * CurrentMouseDelta.x * MouseSensitivity); //Mover la camara en X.
     }
@@ -83,14 +86,20 @@ public class Jugador : EntidadBase
         if (Input.GetKey(KeyCode.LeftShift))
         {
             Speed = HighSpeed;
+            HeadBobbing.Frecuencia = 25;
+            HeadBobbing.Amplitud = 0.015f;
         }
         else if (Input.GetKey(KeyCode.LeftControl))
         {
             Speed = LowSpeed;
+            HeadBobbing.Frecuencia = 10;
+            HeadBobbing.Amplitud = 0.005f;
         }
         else
         {
             Speed = NormalSpeed;
+            HeadBobbing.Frecuencia = 15;
+            HeadBobbing.Amplitud = 0.01f;
         }
     }
 }

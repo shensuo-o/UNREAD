@@ -1185,6 +1185,7 @@ GameObject:
   - component: {fileID: 1288489819}
   - component: {fileID: 1288489821}
   - component: {fileID: 1288489820}
+  - component: {fileID: 1288489822}
   m_Layer: 3
   m_Name: Jugador
   m_TagString: Untagged
@@ -1266,6 +1267,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   JumpHeight: 3
+  HeadBobbing: {fileID: 0}
+--- !u!114 &1288489822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288489818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c65873c90a84ec4cbd53a3357288b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeadBobbing
+  Enabled: 1
+  Amplitud: 0.01
+  Frecuencia: 15
+  Camara: {fileID: 1447956962}
+  CameraHolder: {fileID: 1696506629}
+  ToggleSpeed: 2
 --- !u!1 &1416549376
 GameObject:
   m_ObjectHideFlags: 0
