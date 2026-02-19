@@ -38,7 +38,7 @@ public class HeadBobbing : MonoBehaviour
     {
         Vector3 pos = Vector3.zero;
         pos.y += Mathf.Sin(Time.time * Frecuencia) * Amplitud;
-        pos.x += Mathf.Cos(Time.time * Frecuencia / 2) * Amplitud * 2;
+        pos.x += Mathf.Cos(Time.time * Frecuencia / 2) * Amplitud;
         return pos;
     }
 
@@ -66,7 +66,7 @@ public class HeadBobbing : MonoBehaviour
     private void ResetPosition()
     {
         if (Camara.localPosition == StartPos) return;
-        Camara.localPosition = Vector3.Lerp (Camara.localPosition, StartPos, 1 * Time.deltaTime);
+        Camara.localPosition = Vector3.Lerp (Camara.localPosition, StartPos, 5 * Time.deltaTime);
     }
 
     private Vector3 FocusTarget()
