@@ -3,15 +3,25 @@ using UnityEngine.AI;
 
 public class LaSombra : EntidadBase
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private Transform Player;
+    [SerializeField] private NavMeshAgent Agent;
+
+    
     void Start()
     {
-        
+        Agent = GetComponent<NavMeshAgent>();
+
+        if (Player == null )
+        {
+            Player = GameObject.Find("Jugador").transform;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Player != null && Agent.enabled)
+        {
+            Agent.SetDestination(Player.position);
+        }
     }
 }
