@@ -9,7 +9,7 @@ public class EntidadBase : MonoBehaviour
     public float NormalSpeed;
     public float HighSpeed; //Velocidad al ir mas rapido.
     public float LowSpeed; //Velocidad al agacharse o al ir mas lento.
-    [Range(0.0f, 0.5f)] public float MovementSmoothTime; //Suavizado de movomiento.
+    [Range(0.0f, 0.5f)] public float MovementSmoothTime; //Suavizado de movimiento.
     public float Damage; //Daño de la entidad.
 
     public void TakeDamage(float damage) //Función que se llama al recibir daño.

@@ -2256,6 +2256,7 @@ MonoBehaviour:
   Enabled: 1
   Amplitud: 0.005
   Frecuencia: 15
+  NegativeEffect: 0
   Camara: {fileID: 1447956962}
   CameraHolder: {fileID: 1696506629}
   ToggleSpeed: 2
@@ -3278,8 +3279,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 3
+  m_Acceleration: 10
   avoidancePriority: 1
   m_AngularSpeed: 120
   m_StoppingDistance: 1.3
@@ -3305,14 +3306,15 @@ MonoBehaviour:
   Alive: 1
   HP: 1
   MaxHP: 1
-  Speed: 4
-  NormalSpeed: 0
-  HighSpeed: 8
-  LowSpeed: 1
-  MovementSmoothTime: 0.03
+  Speed: 3
+  NormalSpeed: 3
+  HighSpeed: 5
+  LowSpeed: 0.25
+  MovementSmoothTime: 0.5
   Damage: 1000
   Player: {fileID: 1288489819}
   Agent: {fileID: 1877682437}
+  Effect: 0
 --- !u!1 &1935518471
 GameObject:
   m_ObjectHideFlags: 0

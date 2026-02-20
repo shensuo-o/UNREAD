@@ -6,6 +6,7 @@ public class HeadBobbing : MonoBehaviour
 
     [Range(0, 0.1f)] public float Amplitud = 0.015f;
     [Range(0, 30f)] public float Frecuencia = 10f;
+    public float NegativeEffect;
 
     [SerializeField] private Transform Camara = null;
     [SerializeField] private Transform CameraHolder = null;
@@ -37,8 +38,8 @@ public class HeadBobbing : MonoBehaviour
     private Vector3 FootStepMotion()
     {
         Vector3 pos = Vector3.zero;
-        pos.y += Mathf.Sin(Time.time * Frecuencia) * Amplitud;
-        pos.x += Mathf.Cos(Time.time * Frecuencia / 2) * Amplitud;
+        pos.y += Mathf.Sin(Time.time * Frecuencia) * Amplitud * NegativeEffect;
+        pos.x += Mathf.Cos(Time.time * Frecuencia / 2) * Amplitud * NegativeEffect;
         return pos;
     }
 

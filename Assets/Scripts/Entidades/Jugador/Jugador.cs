@@ -23,7 +23,7 @@ public class Jugador : EntidadBase
     private Vector2 DirVelocity;
     private Vector3 Velocity;
 
-    [SerializeField] private HeadBobbing HeadBobbing;
+    public HeadBobbing HeadBobbing;
 
     private void Awake()
     {
