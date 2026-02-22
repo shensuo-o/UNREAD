@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Jugador : EntidadBase
 {
+    #region FisrtPersonMovement
     [SerializeField] private Transform Camara; //Transform de la camara del Jugador.
-    [SerializeField] [Range(0.0f, 0.5f)] private float MouseSmoothTime = 0.03f; //Suavizado del movimiento del mause. Con un slider.
+    [SerializeField][Range(0.0f, 0.5f)] private float MouseSmoothTime = 0.03f; //Suavizado del movimiento del mause. Con un slider.
     [SerializeField] private bool CursorLock = true; //Variable para setear el cursor fijo.
     [SerializeField] private float MouseSensitivity = 3.5f; //Sensibilidad del mause.
     [SerializeField] private float Gravity = -30; //Gravedad.
@@ -14,7 +15,7 @@ public class Jugador : EntidadBase
     private float VerticalVelocity; //Velocidad vertical.
     private bool IsGrounded; //Si esta, o no, en el piso.
 
-    private float CameraCap; 
+    private float CameraCap;
     private Vector2 CurrentMouseDelta;
     private Vector2 CurrentCameraVelocity;
 
@@ -24,6 +25,8 @@ public class Jugador : EntidadBase
     private Vector3 Velocity;
 
     public HeadBobbing HeadBobbing;
+
+    #endregion
 
     private void Awake()
     {
@@ -49,6 +52,8 @@ public class Jugador : EntidadBase
         SprintAndCrouch();
     }
 
+    #region MovementFunctions
+
     private void MoveCamara() //Movimiento de Camara.
     {
         Vector2 targetMouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")); //Input del movimiento del mouse.
@@ -68,14 +73,14 @@ public class Jugador : EntidadBase
         Direction = Vector2.SmoothDamp(Direction, targetDirection, ref DirVelocity, MovementSmoothTime); //Calcular direccion del movimiento.
         VerticalVelocity += Gravity * 2f * Time.deltaTime; //Velocidad de salto.
         Velocity = (transform.forward * Direction.y + transform.right * Direction.x) * Speed + Vector3.up * VerticalVelocity; //Velocidad de movimiento total.
-        CharacterController.Move(Velocity*Time.deltaTime); //Mover al personaje.
+        CharacterController.Move(Velocity * Time.deltaTime); //Mover al personaje.
 
         if (IsGrounded && Input.GetButtonDown("Jump"))
         {
             VerticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
         }
 
-        if(IsGrounded! && CharacterController.velocity.y < -1)
+        if (IsGrounded! && CharacterController.velocity.y < -1)
         {
             VerticalVelocity = -8;
         }
@@ -102,4 +107,6 @@ public class Jugador : EntidadBase
             HeadBobbing.Amplitud = 0.01f;
         }
     }
+
+    #endregion
 }
