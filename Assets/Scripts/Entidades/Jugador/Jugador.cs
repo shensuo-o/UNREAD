@@ -109,4 +109,9 @@ public class Jugador : EntidadBase
     }
 
     #endregion
+
+    public void TakeDamage(int damage)
+    {
+        HP -= damage;
+    }
 }

@@ -9,6 +9,8 @@ public class MeleeAttack : MonoBehaviour
     [SerializeField] private RaycastHit HitInfo;
     [SerializeField] private bool ShouldCast;
     [SerializeField] private LayerMask Mask;
+    public Collider[] Hits;
+    public float Damage;
 
     void Update()
     {
@@ -27,15 +29,27 @@ public class MeleeAttack : MonoBehaviour
     public void SetCast()
     {
         ShouldCast = !ShouldCast;
+        if (ShouldCast == false )
+        {
+            Hits = null;
+        }
     }
 
     public void HitBoxCast()
     {
         if (ShouldCast)
         {
-            if (Physics.CheckSphere(CastPoint1.position, CastRadious, Mask))
+            Hits = Physics.OverlapSphere(CastPoint1.position, CastRadious, Mask);
+
+            if (Hits != null)
             {
-                Debug.Log("La Sombra Was Hit.");
+                foreach (Collider c in Hits)
+                {
+                    if (c.gameObject.GetComponent<BaseEnemy>())
+                    {
+                        c.gameObject.GetComponent<BaseEnemy>().TakeDamage(Damage);
+                    }
+                }
             }
         }
     }

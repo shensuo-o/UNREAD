@@ -11,14 +11,27 @@ public class EntidadBase : MonoBehaviour
     public float LowSpeed; //Velocidad al agacharse o al ir mas lento.
     [Range(0.0f, 0.5f)] public float MovementSmoothTime; //Suavizado de movimiento.
     public float Damage; //Daño de la entidad.
+    public float Timer;
+    public float HitTimer;
+    public bool GotHit;
 
     public void TakeDamage(float damage) //Función que se llama al recibir daño.
     {
-        HP -= damage;
-        if (HP <= 0)
+        if (Timer >= HitTimer)
         {
-            Alive = false;
-            Death();
+            GotHit = false;
+            Timer = 0;
+        }
+
+        if (!GotHit)
+        {
+            HP -= damage;
+            if (HP <= 0)
+            {
+                Alive = false;
+                Death();
+            }
+            GotHit = true;
         }
     }
 
