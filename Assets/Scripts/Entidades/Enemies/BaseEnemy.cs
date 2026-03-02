@@ -17,21 +17,12 @@ public class BaseEnemy : EntidadBase
         }
     }
 
-    /*private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.GetComponent<Jugador>())
-        {
-            Debug.Log("choque al jugador"); 
-            collision.gameObject.GetComponent<Jugador>().TakeDamage(Damage);
-        }
-    }*/
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Jugador>())
         {
             Debug.Log("choque al jugador");
-            other.gameObject.GetComponent<Jugador>().TakeDamage(Damage);
+            other.gameObject.GetComponent<Jugador>().TakeDamage(Damage, false);
         }
     }
 }

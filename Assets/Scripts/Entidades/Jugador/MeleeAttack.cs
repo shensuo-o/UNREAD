@@ -6,7 +6,6 @@ public class MeleeAttack : MonoBehaviour
     [SerializeField] private float CastRadious;
     [SerializeField] private Animator WeaponAnimator;
     [SerializeField] private AnimationClip AttackClip;
-    [SerializeField] private RaycastHit HitInfo;
     [SerializeField] private bool ShouldCast;
     [SerializeField] private LayerMask Mask;
     public Collider[] Hits;
@@ -14,8 +13,11 @@ public class MeleeAttack : MonoBehaviour
 
     void Update()
     {
-        Attack();
-        HitBoxCast();
+        if (InventoryManager.InvInstance.PauseGame == false)
+        {
+            Attack();
+            HitBoxCast();
+        }
     }
 
     private void Attack()
@@ -47,7 +49,7 @@ public class MeleeAttack : MonoBehaviour
                 {
                     if (c.gameObject.GetComponent<BaseEnemy>())
                     {
-                        c.gameObject.GetComponent<BaseEnemy>().TakeDamage(Damage);
+                        c.gameObject.GetComponent<BaseEnemy>().TakeDamage(Damage, false);
                     }
                 }
             }

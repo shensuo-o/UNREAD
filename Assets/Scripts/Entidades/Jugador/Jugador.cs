@@ -38,7 +38,7 @@ public class Jugador : EntidadBase
         CharacterController = GetComponent<CharacterController>(); //Setear Character Controller.
         HeadBobbing = GetComponent<HeadBobbing>();
 
-        if (CursorLock)
+        if (CursorLock && InventoryManager.InvInstance.PauseGame == false)
         {
             Cursor.lockState = CursorLockMode.Locked; //Cursor no se mueve.
             Cursor.visible = false; //Cursor no se ve.
@@ -47,9 +47,12 @@ public class Jugador : EntidadBase
 
     void Update()
     {
-        MoveCamara();
-        Movement();
-        SprintAndCrouch();
+        if (InventoryManager.InvInstance.PauseGame == false)
+        {
+            MoveCamara();
+            Movement();
+            SprintAndCrouch();
+        }
     }
 
     #region MovementFunctions

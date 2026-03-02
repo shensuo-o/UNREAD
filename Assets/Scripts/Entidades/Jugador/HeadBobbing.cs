@@ -29,9 +29,12 @@ public class HeadBobbing : MonoBehaviour
         }
         else
         {
-            CheckMotion();
+            if (InventoryManager.InvInstance.PauseGame == false)
+            {
+                CheckMotion();
+                Camara.LookAt(FocusTarget());
+            }
             ResetPosition();
-            Camara.LookAt(FocusTarget());
         }
     }
 

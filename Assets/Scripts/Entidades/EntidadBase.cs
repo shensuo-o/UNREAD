@@ -15,8 +15,14 @@ public class EntidadBase : MonoBehaviour
     public float HitTimer;
     public bool GotHit;
 
-    public void TakeDamage(float damage) //Función que se llama al recibir daño.
+    public void TakeDamage(float damage, bool wasShot) //Función que se llama al recibir daño.
     {
+        if (wasShot)
+        {
+            Timer = HitTimer;
+            GotHit = true;
+        }
+
         if (Timer >= HitTimer)
         {
             GotHit = false;
@@ -31,7 +37,11 @@ public class EntidadBase : MonoBehaviour
                 Alive = false;
                 Death();
             }
-            GotHit = true;
+
+            if (!wasShot)
+            {
+                GotHit = true;
+            }
         }
     }
 
