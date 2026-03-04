@@ -14,8 +14,8 @@ TagManager:
   - Piso
   - Sombra
   - Enemy
-  - 
-  - 
+  - InteractableObject
+  - PickableItem
   - 
   - 
   - 

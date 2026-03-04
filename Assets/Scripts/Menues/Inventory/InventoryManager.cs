@@ -1,11 +1,13 @@
+using NUnit.Framework;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager InvInstance;
     public GameObject Inventory;
     public bool PauseGame;
-    public GameObject[] ObjectsInInv;
+    public List<GameObject> ObjectsInInv = new List<GameObject>();
 
     private void Awake()
     {
@@ -14,7 +16,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             PauseGame = !PauseGame;
             Inventory.SetActive(PauseGame);
