@@ -12,11 +12,7 @@ public class Interactions : MonoBehaviour
 
     [SerializeField] private DragableItem ItemPrefab;
     [SerializeField] private InventorySlot[] Slots;
-
-    void Start()
-    {
-        
-    }
+    [SerializeField] private bool HasItemNeeded;
 
     void Update()
     {
@@ -38,7 +34,34 @@ public class Interactions : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    ItemDetected.GetComponent<InteractableObject>().Action();
+                    if (ItemDetected.GetComponent<InteractableObject>().NeedItem)
+                    {
+                        for (int i = 0; i < InventoryManager.InvInstance.ObjectsInInv.Count; i++)
+                        {
+                            if (InventoryManager.InvInstance.ObjectsInInv[i] == ItemDetected.GetComponent<InteractableObject>().ItemNeeded)
+                            {
+                                HasItemNeeded = true;
+                                break;
+                            }
+                            else
+                            {
+                                HasItemNeeded = false;
+                            }
+                        }
+
+                        if (HasItemNeeded == true)
+                        {
+                            ItemDetected.GetComponent<InteractableObject>().Action(true);
+                        }
+                        else if (HasItemNeeded == false)
+                        {
+                            ItemDetected.GetComponent<InteractableObject>().Action(false);
+                        }
+                    }
+                    else if (!ItemDetected.GetComponent<InteractableObject>().NeedItem)
+                    {
+                        ItemDetected.GetComponent<InteractableObject>().Action(true);
+                    }
                 }
             }
             else if (ItemDetected.layer == 10)
