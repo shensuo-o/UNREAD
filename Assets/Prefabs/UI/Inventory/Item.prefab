@@ -87,3 +87,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragableItem
   ParentAfterDrag: {fileID: 0}
   Image: {fileID: 8508832261252846675}
+  inspectionCamera: {fileID: 2329046870647912048, guid: 6af7c55b4f19a9542bc1aa84dc925c91, type: 3}

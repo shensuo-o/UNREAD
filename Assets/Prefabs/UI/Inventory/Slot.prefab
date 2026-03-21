@@ -110,3 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e5a7fadcec58d4486fbbf5be727bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventorySlot
+  IsEquipment: 0
+  inspectButton: {fileID: 6643176158246900356, guid: d5902cc823030fb4d9590b151a470811, type: 3}
