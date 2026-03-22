@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1041436420068490888}
   - component: {fileID: 4036350261506271043}
   - component: {fileID: 8585923314880774609}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Prism
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1695574977887029956}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.004, z: 0}
+  m_LocalPosition: {x: 0, y: 0.368, z: 0}
   m_LocalScale: {x: 0.1, y: 1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 468654970572897042}
   - component: {fileID: 5109809946614437364}
   - component: {fileID: 5822654844043634651}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: RedHammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933706468774288479}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 45b2ecc83f80a3440948a130e97de662, type: 2}
   m_CullingMode: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933706468774288479}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c38253fc023832046a2e66c01b733046, type: 3}
   m_Name: 
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4172514250529097155}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: CastPoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ Transform:
   m_GameObject: {fileID: 2420575114729273769}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.20400003, z: 0}
+  m_LocalPosition: {x: 0, y: 0.568, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 1427078495145006702}
   - component: {fileID: 8779418806513506510}
   - component: {fileID: 4841475332627864263}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ Transform:
   m_GameObject: {fileID: 7200117730484293420}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.31100002, z: 0}
+  m_LocalPosition: {x: 0, y: 0.675, z: 0}
   m_LocalScale: {x: 0.2, y: 0.25, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []

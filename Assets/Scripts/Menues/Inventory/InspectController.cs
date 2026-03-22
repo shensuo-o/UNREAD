@@ -1,13 +1,14 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class InspectController : MonoBehaviour
 {
     public Transform target;
+
     public float rotationSpeed = 5f;
     public float zoomSpeed = 2f;
     public float minDistance = 1f;
     public float maxDistance = 5f;
+    public float autoRotateSpeed = 10f;
 
     private float currentDistance = 2f;
 
@@ -24,12 +25,15 @@ public class InspectController : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
+            float rotX = Input.GetAxisRaw("Mouse X") * rotationSpeed;
+            float rotY = Input.GetAxisRaw("Mouse Y") * rotationSpeed;
 
-            float rotX = Input.GetAxis("Mouse X") * rotationSpeed;
-            float rotY = Input.GetAxis("Mouse Y") * rotationSpeed;
-
-            target.Rotate(Vector3.up, -rotX, Space.World);
-            target.Rotate(Vector3.right, rotY, Space.World);
+            target.Rotate(Vector3.up, -rotX, Space.Self);
+            target.Rotate(Vector3.right, rotY, Space.Self);
+        }
+        else
+        {
+            target.Rotate(Vector3.up, autoRotateSpeed * Time.deltaTime, Space.Self);
         }
     }
 
@@ -51,6 +55,17 @@ public class InspectController : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             InventoryManager.InvInstance.ExitInspection();
+        }
+    }
+
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
+
+        if (target != null)
+        {
+            target.localRotation = Quaternion.identity;
+            target.localPosition = new Vector3(0, 0, currentDistance);
         }
     }
 }

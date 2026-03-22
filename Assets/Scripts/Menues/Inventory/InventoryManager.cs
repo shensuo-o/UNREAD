@@ -1,52 +1,67 @@
-using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager InvInstance;
+
+    public GameObject eventSystem;
     public GameObject Inventory;
     public bool PauseGame;
     public List<GameObject> ObjectsInInv = new List<GameObject>();
 
-    [Header("Inspection System")]
-    public GameObject inspectionPanel; // UI donde se ve el objeto
-    public Transform inspectionPoint;  // donde aparece el objeto
+    [Header("Cameras")]
+    public Camera mainCamera;
     public Camera inspectionCamera;
-    public InspectController controller;
+
+    [Header("Inspection System")]
+    public Transform inspectionPoint;
     public CanvasGroup inventoryCanvasGroup;
+    public InspectController controller;
+    private bool isInspecting = false;
+    public Vector3 inspectPosition = new Vector3(0, 0, 0f);
+    public float inspectScale;
 
     private List<GameObject> inspectedObjects = new List<GameObject>();
 
     private void Awake()
     {
         InvInstance = this;
+
+        inspectionCamera.gameObject.SetActive(false);
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            if (isInspecting)
+            {
+                ExitInspection();
+                return;
+            }
+
             PauseGame = !PauseGame;
             Inventory.SetActive(PauseGame);
+
             if (PauseGame)
             {
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
-            }else if (!PauseGame)
-            {
-                Cursor.lockState = CursorLockMode.Locked; //Cursor no se mueve
-                Cursor.visible = false; //Cursor no se ve
-                ExitInspection();
             }
-            
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
         }
 
-        if (inspectionPanel.activeSelf && Input.GetMouseButtonDown(1))
+        if (isInspecting && Input.GetMouseButtonDown(1))
         {
             ExitInspection();
         }
     }
+
     void SetLayerRecursively(GameObject obj, int layer)
     {
         obj.layer = layer;
@@ -59,10 +74,12 @@ public class InventoryManager : MonoBehaviour
 
     public void InspectObject(string itemName)
     {
-        inventoryCanvasGroup.blocksRaycasts = false;
-        inventoryCanvasGroup.interactable = false;
+        isInspecting = true;
 
-        inspectionPanel.SetActive(true);
+        eventSystem.SetActive(false);
+        Inventory.SetActive(false);
+
+        mainCamera.gameObject.SetActive(false);
         inspectionCamera.gameObject.SetActive(true);
 
         foreach (GameObject obj in inspectedObjects)
@@ -70,6 +87,7 @@ public class InventoryManager : MonoBehaviour
             if (obj.name.Contains(itemName))
             {
                 obj.SetActive(true);
+                AssignController(obj);
                 return;
             }
         }
@@ -78,51 +96,52 @@ public class InventoryManager : MonoBehaviour
 
         if (prefab == null)
         {
-            Debug.LogError("No se encontró prefab:" + itemName);
+            Debug.LogError("No se encontró prefab: " + itemName);
             return;
         }
 
-        GameObject newObj = Instantiate(prefab, inspectionPoint.position, Quaternion.identity);
-
-        newObj.transform.SetParent(inspectionPoint);
-        newObj.transform.localPosition = new Vector3(0, 0, 2f);
+        GameObject newObj = Instantiate(prefab, inspectionPoint);
+        newObj.transform.localPosition = inspectPosition;
         newObj.transform.localRotation = Quaternion.identity;
-        newObj.transform.localScale = new Vector3(100,100,100);
+        newObj.transform.localScale = Vector3.one * inspectScale;
 
         SetLayerRecursively(newObj, LayerMask.NameToLayer("Inspectable"));
 
         inspectedObjects.Add(newObj);
 
-        InspectController controller = inspectionCamera.GetComponent<InspectController>();
+        AssignController(newObj);
+    }
 
+    void AssignController(GameObject obj)
+    {
         if (controller != null)
         {
-            controller.target = newObj.transform;
+            controller.target = obj.transform;
         }
     }
 
     public void ExitInspection()
     {
-        inspectionPanel.SetActive(false);
+        isInspecting = false;
+
+        eventSystem.SetActive(true);
+
+        mainCamera.gameObject.SetActive(true);
         inspectionCamera.gameObject.SetActive(false);
-
-        RenderTexture.active = inspectionCamera.targetTexture;
-        GL.Clear(true, true, Color.clear);
-        RenderTexture.active = null;
-
-        inventoryCanvasGroup.blocksRaycasts = true;
-        inventoryCanvasGroup.interactable = true;
 
         foreach (GameObject obj in inspectedObjects)
         {
             obj.SetActive(false);
         }
 
-        InspectController controller = inspectionCamera.GetComponent<InspectController>();
         if (controller != null)
         {
             controller.target = null;
         }
-    }
 
+        if (PauseGame)
+        {
+            Inventory.SetActive(true);
+        }
+    }
 }
