@@ -325,22 +325,6 @@ PrefabInstance:
       propertyPath: m_CameraType
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7697377416718436292, guid: 6af7c55b4f19a9542bc1aa84dc925c91, type: 3}
-      propertyPath: maxDistance
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697377416718436292, guid: 6af7c55b4f19a9542bc1aa84dc925c91, type: 3}
-      propertyPath: minDistance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697377416718436292, guid: 6af7c55b4f19a9542bc1aa84dc925c91, type: 3}
-      propertyPath: rotationSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697377416718436292, guid: 6af7c55b4f19a9542bc1aa84dc925c91, type: 3}
-      propertyPath: inertiaDamping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8092571491999307094, guid: 6af7c55b4f19a9542bc1aa84dc925c91, type: 3}
       propertyPath: m_Name
       value: InspectionCamera
