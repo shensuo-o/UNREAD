@@ -45,10 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectController
   target: {fileID: 0}
-  rotationSpeed: 5
+  rotationSpeed: 10
   zoomSpeed: 2
   minDistance: 1
-  maxDistance: 5
+  maxDistance: 10
+  autoRotateSpeed: 10
+  inertiaDamping: 2
 --- !u!1 &7559417407911136429
 GameObject:
   m_ObjectHideFlags: 0

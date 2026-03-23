@@ -10,7 +10,12 @@ public class InspectController : MonoBehaviour
     public float maxDistance = 5f;
     public float autoRotateSpeed = 10f;
 
+    [Header("Inertia")]
+    public float inertiaDamping = 5f;
+
     private float currentDistance = 2f;
+
+    private Vector2 rotationVelocity;
 
     void Update()
     {
@@ -23,18 +28,29 @@ public class InspectController : MonoBehaviour
 
     void HandleRotation()
     {
-        if (Input.GetMouseButton(0))
-        {
-            float rotX = Input.GetAxisRaw("Mouse X") * rotationSpeed;
-            float rotY = Input.GetAxisRaw("Mouse Y") * rotationSpeed;
+        bool isDragging = Input.GetMouseButton(0);
 
-            target.Rotate(Vector3.up, -rotX, Space.Self);
-            target.Rotate(Vector3.right, rotY, Space.Self);
+        if (isDragging)
+        {
+            float rotX = Input.GetAxisRaw("Mouse X");
+            float rotY = Input.GetAxisRaw("Mouse Y");
+
+            if (Mathf.Abs(rotX) > 0.01f || Mathf.Abs(rotY) > 0.01f)
+            {
+                rotationVelocity.x += rotX * rotationSpeed;
+                rotationVelocity.y += rotY * rotationSpeed;
+            }
         }
         else
         {
-            target.Rotate(Vector3.up, autoRotateSpeed * Time.deltaTime, Space.Self);
+            rotationVelocity = Vector2.Lerp(rotationVelocity, Vector2.zero, inertiaDamping * Time.deltaTime);
         }
+
+        float finalRotX = (isDragging ? 0f : autoRotateSpeed) + rotationVelocity.x;
+        float finalRotY = rotationVelocity.y;
+
+        target.Rotate(Vector3.up, -finalRotX * Time.deltaTime, Space.Self);
+        target.Rotate(Vector3.right, finalRotY * Time.deltaTime, Space.Self);
     }
 
     void HandleZoom()
@@ -66,6 +82,8 @@ public class InspectController : MonoBehaviour
         {
             target.localRotation = Quaternion.identity;
             target.localPosition = new Vector3(0, 0, currentDistance);
+
+            rotationVelocity = Vector2.zero;
         }
     }
 }
