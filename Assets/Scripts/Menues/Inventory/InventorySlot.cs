@@ -7,6 +7,8 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler, I
     public bool IsEquipment;
     [SerializeField] private GameObject inspectButton;
     private bool isRightClickHolding = false;
+
+
     private GameObject currentItem;
 
     public void OnDrop(PointerEventData eventData)
@@ -74,5 +76,9 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler, I
 
         DragableItem item = GetComponentInChildren<DragableItem>();
         return item.Image.texture.name;
+    }
+    public InventorySlot(bool isRightClickHolding)
+    {
+        this.isRightClickHolding = isRightClickHolding;
     }
 }
