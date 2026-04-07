@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Patrol")]
     public Transform[] patrolPoints;
+    public int PatrolDistance = 5;
 
     [Header("Hidden Points")]
     public Transform[] hiddenPoints;
@@ -43,6 +44,10 @@ public class Enemy : MonoBehaviour
     public Action OnPlayerLost;
     public Action OnStartSearch;
     public Action OnExhausted;
+
+
+    public List<Transform> listap = new List<Transform>();
+
 
 
     private void Awake()
@@ -114,12 +119,21 @@ public class Enemy : MonoBehaviour
 
     public Transform GetRandomClosePatrolPoint()
     {
-        List<Transform> sorted = patrolPoints
+       List<Transform> sorted = patrolPoints
             .OrderBy(p => Vector3.Distance(transform.position, p.position))
             .ToList();
 
-        int max = Mathf.Min(2, sorted.Count);
-        return sorted[UnityEngine.Random.Range(0, max)];
+        for (int i = 0; i < sorted.Count; i++)
+        {
+            if(Vector3.Distance (transform.position, sorted[i].position) > PatrolDistance)
+            {
+                sorted.RemoveAt(i);
+            }
+        }
+            //listap = patrolPoints;
+
+        //int max = Mathf.Min(2, listap.Count);
+        return sorted[UnityEngine.Random.Range(0, sorted.Count)];
     }
 
     public bool CanSeePlayer()

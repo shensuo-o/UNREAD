@@ -170,10 +170,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   patrolPoints: []
+  PatrolDistance: 5
   hiddenPoints: []
   canPatrol: 1
   canHide: 1
   agent: {fileID: -547513310183436530}
+  listap: []
 --- !u!195 &-547513310183436530
 NavMeshAgent:
   m_ObjectHideFlags: 0

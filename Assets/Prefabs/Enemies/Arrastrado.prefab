@@ -160,7 +160,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   player: {fileID: 1898348552167571499, guid: 15fb503ca69ef7f47817c3db1d792ff6, type: 3}
   detectionRange: 5
-  target: {fileID: 1898348552167571499, guid: 15fb503ca69ef7f47817c3db1d792ff6, type: 3}
   maxEnergy: 10
   currentEnergy: 0
   energyDrain: 1
@@ -171,10 +170,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   patrolPoints: []
+  PatrolDistance: 50
   hiddenPoints: []
   canPatrol: 1
   canHide: 1
   agent: {fileID: 0}
+  listap: []
 --- !u!195 &-547513310183436530
 NavMeshAgent:
   m_ObjectHideFlags: 0
