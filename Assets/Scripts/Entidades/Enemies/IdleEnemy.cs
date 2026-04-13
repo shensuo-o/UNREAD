@@ -17,10 +17,16 @@ public class IdleEnemy : IEnemyState
 
     public void Tick()
     {
-        // Si llegó al destino
         if (!enemy.agent.pathPending && enemy.agent.remainingDistance < 0.5f)
         {
-            SetNewDestination();
+            if (UnityEngine.Random.value > 0.5f)
+            {
+                enemy.stateMachine.ChangeState(new LookingEnemy(enemy));
+            }
+            else
+            {
+                SetNewDestination();
+            }
         }
 
         // Detectar jugador

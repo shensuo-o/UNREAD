@@ -13,7 +13,6 @@ public class Enemy : MonoBehaviour
     public Transform player;
 
     [Header("Detection")]
-    public float detectionRange = 5f;
     private bool isPlayerInRange;
 
     [Header("Energy")]
@@ -30,6 +29,7 @@ public class Enemy : MonoBehaviour
     [Header("Patrol")]
     public Transform[] patrolPoints;
     public int PatrolDistance = 5;
+    public float HeightDetectionNode;
 
     [Header("Hidden Points")]
     public Transform[] hiddenPoints;
@@ -44,11 +44,6 @@ public class Enemy : MonoBehaviour
     public Action OnPlayerLost;
     public Action OnStartSearch;
     public Action OnExhausted;
-
-
-    public List<Transform> listap = new List<Transform>();
-
-
 
     private void Awake()
     {
@@ -117,23 +112,48 @@ public class Enemy : MonoBehaviour
         return bestPoint;
     }
 
+    /*List<Transform> sorted = patrolPoints
+         .OrderBy(p => Vector3.Distance(transform.position, p.position))
+         .ToList();
+
+     for (int i = 0; i < sorted.Count; i++)
+     {
+         if(Vector3.Distance (transform.position, sorted[i].position) > PatrolDistance)
+         {
+             sorted.RemoveAt(i);
+         }
+     }
+
+     return sorted[UnityEngine.Random.Range(0, sorted.Count)];*/
     public Transform GetRandomClosePatrolPoint()
     {
-       List<Transform> sorted = patrolPoints
+        List<Transform> sorted = patrolPoints
             .OrderBy(p => Vector3.Distance(transform.position, p.position))
             .ToList();
 
-        for (int i = 0; i < sorted.Count; i++)
+        List<Transform> validPoints = new List<Transform>();
+
+        foreach (Transform point in sorted)
         {
-            if(Vector3.Distance (transform.position, sorted[i].position) > PatrolDistance)
+            // Distancia horizontal
+            Vector2 enemyXZ = new Vector2(transform.position.x, transform.position.z);
+            Vector2 pointXZ = new Vector2(point.position.x, point.position.z);
+
+            float horizontalDistance = Vector2.Distance(enemyXZ, pointXZ);
+
+            // Diferencia en altura
+            float heightDifference = Mathf.Abs(transform.position.y - point.position.y);
+
+            if (horizontalDistance <= PatrolDistance && heightDifference <= HeightDetectionNode)
             {
-                sorted.RemoveAt(i);
+                validPoints.Add(point);
             }
         }
-            //listap = patrolPoints;
 
-        //int max = Mathf.Min(2, listap.Count);
-        return sorted[UnityEngine.Random.Range(0, sorted.Count)];
+        if (validPoints.Count == 0)
+            return GetClosestPatrolPoint();
+
+        return validPoints[UnityEngine.Random.Range(0, validPoints.Count)];
     }
 
     public bool CanSeePlayer()
@@ -164,5 +184,37 @@ public class Enemy : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(transform.position, transform.position + left * viewDistance);
         Gizmos.DrawLine(transform.position, transform.position + right * viewDistance);
+
+        Gizmos.color = Color.green;
+
+        // Dibujar círculo inferior
+        DrawCircle(transform.position, PatrolDistance);
+
+        // Dibujar círculo superior
+        Vector3 top = transform.position + Vector3.up * HeightDetectionNode;
+        DrawCircle(top, PatrolDistance);
+
+        // Líneas verticales (simulan cilindro)
+        Gizmos.DrawLine(transform.position + Vector3.forward * PatrolDistance, top + Vector3.forward * PatrolDistance);
+        Gizmos.DrawLine(transform.position - Vector3.forward * PatrolDistance, top - Vector3.forward * PatrolDistance);
+        Gizmos.DrawLine(transform.position + Vector3.right * PatrolDistance, top + Vector3.right * PatrolDistance);
+        Gizmos.DrawLine(transform.position - Vector3.right * PatrolDistance, top - Vector3.right * PatrolDistance);
+    }
+
+    void DrawCircle(Vector3 center, float radius)
+    {
+        int segments = 30;
+        float angle = 0f;
+
+        Vector3 prevPoint = center + new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * radius;
+
+        for (int i = 1; i <= segments; i++)
+        {
+            angle = i * Mathf.PI * 2 / segments;
+            Vector3 newPoint = center + new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * radius;
+
+            Gizmos.DrawLine(prevPoint, newPoint);
+            prevPoint = newPoint;
+        }
     }
 }
