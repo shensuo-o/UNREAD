@@ -224,9 +224,9 @@ MonoBehaviour:
   Alive: 1
   HP: 100
   MaxHP: 100
-  Speed: 6
+  Speed: 4
   NormalSpeed: 0
-  HighSpeed: 10
+  HighSpeed: 6
   LowSpeed: 2
   MovementSmoothTime: 0.03
   Damage: 10
