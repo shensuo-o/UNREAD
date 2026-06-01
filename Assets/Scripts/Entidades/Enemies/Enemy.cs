@@ -1,9 +1,10 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 using static UnityEngine.GraphicsBuffer;
-using System.Linq;
-using System.Collections.Generic;
 
 public class Enemy : MonoBehaviour
 {
@@ -34,6 +35,10 @@ public class Enemy : MonoBehaviour
     [Header("Hidden Points")]
     public Transform[] hiddenPoints;
 
+    [Header("Start Animation")]
+    public Animator enemyAnimator;
+    public string startAnimation;
+
     [Header("Behavior")]
     public bool canPatrol = true;
     public bool canHide = true;
@@ -55,6 +60,25 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        if (enemyAnimator != null && !string.IsNullOrEmpty(startAnimation))
+        {
+            StartCoroutine(PlayStartAnimation());
+        }
+        else
+        {
+            ChooseInitialState();
+        }
+    }
+
+    private IEnumerator PlayStartAnimation()
+    {
+        enemyAnimator.Play(startAnimation);
+
+        yield return null;
+
+        float animLength = enemyAnimator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(animLength);
 
         ChooseInitialState();
     }
@@ -111,20 +135,6 @@ public class Enemy : MonoBehaviour
 
         return bestPoint;
     }
-
-    /*List<Transform> sorted = patrolPoints
-         .OrderBy(p => Vector3.Distance(transform.position, p.position))
-         .ToList();
-
-     for (int i = 0; i < sorted.Count; i++)
-     {
-         if(Vector3.Distance (transform.position, sorted[i].position) > PatrolDistance)
-         {
-             sorted.RemoveAt(i);
-         }
-     }
-
-     return sorted[UnityEngine.Random.Range(0, sorted.Count)];*/
     public Transform GetRandomClosePatrolPoint()
     {
         List<Transform> sorted = patrolPoints
