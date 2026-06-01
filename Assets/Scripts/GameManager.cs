@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [SerializeField] private GameObject targetItem;
+    [SerializeField] private GameObject DarkBlock;
     [SerializeField] private List<GameObject> lightsToTurnOff;
     [SerializeField] private AudioSource triggerSound;
 
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
         {
             TurnOffLights();
             triggerSound.Play();
+            DarkBlock.SetActive(false);
         }
     }
 

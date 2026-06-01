@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 using static UnityEngine.GraphicsBuffer;
 
 public class Enemy : MonoBehaviour
@@ -35,9 +36,9 @@ public class Enemy : MonoBehaviour
     [Header("Hidden Points")]
     public Transform[] hiddenPoints;
 
-    [Header("Start Animation")]
-    public Animator enemyAnimator;
-    public string startAnimation;
+    [Header("Do Before Start")]
+    public UnityEvent doBeforeStart;
+    public float waitAfterEvents = 0f;
 
     [Header("Behavior")]
     public bool canPatrol = true;
@@ -60,25 +61,16 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
-        if (enemyAnimator != null && !string.IsNullOrEmpty(startAnimation))
-        {
-            StartCoroutine(PlayStartAnimation());
-        }
-        else
-        {
-            ChooseInitialState();
-        }
+        StartCoroutine(InitSequence());
     }
 
-    private IEnumerator PlayStartAnimation()
+    private IEnumerator InitSequence()
     {
-        enemyAnimator.Play(startAnimation);
-
-        yield return null;
-
-        float animLength = enemyAnimator.GetCurrentAnimatorStateInfo(0).length;
-        yield return new WaitForSeconds(animLength);
+        if (doBeforeStart != null && doBeforeStart.GetPersistentEventCount() > 0)
+        {
+            doBeforeStart.Invoke();
+            yield return new WaitForSeconds(waitAfterEvents);
+        }
 
         ChooseInitialState();
     }
