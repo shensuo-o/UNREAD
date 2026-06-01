@@ -16,7 +16,6 @@ public class LoopTrap : MonoBehaviour
             cc.enabled = false;
             player.transform.position = LoopPoint.position;
             cc.enabled = true;
-            Debug.Log("funca");
         }
     }
 }
