@@ -78,6 +78,7 @@ public class Interactions : MonoBehaviour
                             DragableItem newItem = Instantiate(ItemPrefab, Slots[i].transform);
                             newItem.Image.texture = ItemDetected.GetComponent<PickableItem>().ItemIcon;
                             ItemDetected.GetComponent<PickableItem>().Picked();
+                            GameManager.Instance.OnItemPickedUp(ItemDetected);
                             break;
                         }
                     }
