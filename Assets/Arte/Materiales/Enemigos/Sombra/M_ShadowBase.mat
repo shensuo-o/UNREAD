@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Ghost
-  m_Shader: {fileID: -6465566751694194690, guid: a6099c7ef1c766f4bbcf33505eb2ec84, type: 3}
+  m_Name: M_ShadowBase
+  m_Shader: {fileID: -6465566751694194690, guid: 38ac6fc81269af141bef1f47e5841f92, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -38,12 +38,23 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _FresnelPower: 3
+    - _NoiseContrast: 1.5
+    - _NoiseScale: 10
     - _QueueControl: 0
     - _QueueOffset: 0
-    m_Colors: []
+    - _Speed: 0.08
+    m_Colors:
+    - _Movimiento: {r: 0, g: -1, b: 0, a: 0}
+    - _ShadowColor: {r: 0.047058824, g: 0.047058824, b: 0.047058824, a: 1}
+    - _ShadowDark: {r: 0.02830189, g: 0.000934497, b: 0.000934497, a: 0.003921569}
+    - _ShadowEdgeColor: {r: 0.6132076, g: 0, b: 0.14150935, a: 1}
+    - _ShadowFlow: {r: 0.08, g: 0.03, b: 0, a: 0}
+    - _ShadowMid: {r: 0.090196066, g: 0.06274508, b: 0.078431346, a: 0.003921569}
+    - _ShadowVariationColor: {r: 0.019607844, g: 0.019607844, b: 0.019607844, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &7958978512483379432
+--- !u!114 &6436897873009394855
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
