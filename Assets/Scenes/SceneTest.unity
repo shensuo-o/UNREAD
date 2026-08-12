@@ -317,7 +317,7 @@ VFXRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705136178}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -402,11 +402,11 @@ Transform:
   m_GameObject: {fileID: 705136178}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.861692, y: -1.3967011, z: 0.44668216}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1500715617}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1212557530
 PrefabInstance:
@@ -678,9 +678,17 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f773de52da35160459a772d1dd64739b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -6442319894183558057, guid: e0e39dbce68a51d45aac56f0b509e233, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 705136181}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0e39dbce68a51d45aac56f0b509e233, type: 3}
+--- !u!4 &1500715617 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6442319894183558057, guid: e0e39dbce68a51d45aac56f0b509e233, type: 3}
+  m_PrefabInstance: {fileID: 1500715616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1652702544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1177,4 +1185,3 @@ SceneRoots:
   - {fileID: 1709051471}
   - {fileID: 1652702544}
   - {fileID: 1500715616}
-  - {fileID: 705136181}
