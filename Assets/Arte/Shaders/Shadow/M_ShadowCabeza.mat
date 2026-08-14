@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: teST
+  m_Name: M_ShadowCabeza
   m_Shader: {fileID: -6465566751694194690, guid: 30116797fb75cfb4b97c1c38f1dc74c0, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -59,16 +59,16 @@ Material:
     - _QueueOffset: 0
     - _TwirlAmount: -0.1
     - _TwirlAmount_2: -0.11
-    - _WoobyAmount: 0.08
-    - _WoobyFrecuency: 0.08
-    - _WoobyIntensity: 113.4
+    - _WoobyAmount: 0.05
+    - _WoobyFrecuency: 0.09
+    - _WoobyIntensity: 0
     - _WoobySpeed: 16.16
     m_Colors:
     - _Color: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
     - _ColorBase: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
     - _NoiseSpeed: {r: -0.01, g: -0.01, b: 0, a: 0}
-    - _TwirlCenter: {r: 73.57, g: 101.54, b: 0, a: 0}
-    - _TwirlCenter_2: {r: 73.57, g: 144.97, b: 0, a: 0}
+    - _TwirlCenter: {r: -21.8, g: 101.54, b: 0, a: 0}
+    - _TwirlCenter_2: {r: -69.6, g: 144.97, b: 0, a: 0}
     - _TwirldSpeed: {r: 0.08, g: 0.05, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
