@@ -285,7 +285,7 @@ MonoBehaviour:
   Enabled: 1
   Amplitud: 0.005
   Frecuencia: 15
-  NegativeEffect: 0
+  NegativeEffect: 0.31
   Camara: {fileID: 1026256416105178842}
   CameraHolder: {fileID: 7520047030637619746}
   ToggleSpeed: 2
@@ -321,7 +321,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1536
   ItemDetected: {fileID: 0}
-  RayLenght: 10
+  RayLenght: 2
   CastPoint: {fileID: 1026256416105178842}
   PressE: {fileID: 0}
   ItemPrefab: {fileID: 0}
