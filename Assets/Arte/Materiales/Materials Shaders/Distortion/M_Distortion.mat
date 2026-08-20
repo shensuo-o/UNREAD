@@ -45,13 +45,24 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _CRTGlitchDensity: 40
+    - _CRTGlitchIntensity: 0
+    - _CRTGlitchNoiseScale: 8
+    - _CRTGlitchNoiseSpeed: 2
+    - _CRTGlitchNoiseX: 2
+    - _CRTGlitchNoiseY: 6
+    - _CRTGlitchSpeed: 8
+    - _CRTGlitchStrength: 0.05
     - _CRTIntensityScale: 15
-    - _CRTIntensityVariation: 0.15
+    - _CRTIntensityVariation: 0.3
     - _CRTJitterDensity: 20
     - _CRTJitterSpeed: 3
     - _CRTJitterStrength: 0.002
     - _CRTScanlineDensity: 250
-    - _CRTScanlineStrength: 0.05
+    - _CRTScanlineStrength: 0.08
+    - _CRTWobbleFrequency: 10
+    - _CRTWobbleSpeed: 0.5
+    - _CRTWobbleStrength: 0.003
     - _ChromaticAberrationStrength: 0.0025
     - _DistortionNoiseScale: 4
     - _DistortionSpeed: 1
