@@ -49,17 +49,17 @@ Material:
     - _CRTGlitchIntensity: 0
     - _CRTGlitchNoiseScale: 8
     - _CRTGlitchNoiseSpeed: 2
-    - _CRTGlitchNoiseX: 2
+    - _CRTGlitchNoiseX: 4
     - _CRTGlitchNoiseY: 6
-    - _CRTGlitchSpeed: 8
+    - _CRTGlitchSpeed: 4
     - _CRTGlitchStrength: 0.05
     - _CRTIntensityScale: 15
     - _CRTIntensityVariation: 0.3
     - _CRTJitterDensity: 20
     - _CRTJitterSpeed: 3
     - _CRTJitterStrength: 0.002
-    - _CRTScanlineDensity: 250
-    - _CRTScanlineStrength: 0.08
+    - _CRTScanlineDensity: 100
+    - _CRTScanlineStrength: 0.025
     - _CRTWobbleFrequency: 10
     - _CRTWobbleSpeed: 0.5
     - _CRTWobbleStrength: 0.003
