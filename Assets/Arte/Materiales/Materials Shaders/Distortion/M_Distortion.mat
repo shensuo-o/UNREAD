@@ -46,33 +46,34 @@ Material:
     m_Ints: []
     m_Floats:
     - _CRTGlitchDensity: 40
-    - _CRTGlitchIntensity: 0
+    - _CRTGlitchIntensity: 2
     - _CRTGlitchNoiseScale: 8
     - _CRTGlitchNoiseSpeed: 2
     - _CRTGlitchNoiseX: 4
     - _CRTGlitchNoiseY: 6
     - _CRTGlitchSpeed: 4
-    - _CRTGlitchStrength: 0.05
-    - _CRTIntensityScale: 15
+    - _CRTGlitchStrength: 0.1
+    - _CRTIntensityScale: 10
     - _CRTIntensityVariation: 0.3
     - _CRTJitterDensity: 20
     - _CRTJitterSpeed: 3
-    - _CRTJitterStrength: 0.002
+    - _CRTJitterStrength: 0.007
     - _CRTScanlineDensity: 100
     - _CRTScanlineStrength: 0.025
-    - _CRTWobbleFrequency: 10
+    - _CRTWobbleFrequency: 40
     - _CRTWobbleSpeed: 0.5
-    - _CRTWobbleStrength: 0.003
-    - _ChromaticAberrationStrength: 0.0025
+    - _CRTWobbleStrength: 0.01
+    - _ChromaticAberrationStrength: 0.008
+    - _DistortionBlend: 0
     - _DistortionNoiseScale: 4
     - _DistortionSpeed: 1
     - _DistortionStrength: 0
-    - _NoiseDistortionStrength: 0.03
+    - _NoiseDistortionStrength: 0.08
     - _NoiseSpeed: 0.2
     - _ScreenZoom: 0.95
     - _TestOffset: 0.001
     - _VerticalDistortionNoiseScale: 12
-    - _VerticalDistortionStrength: 0.005
+    - _VerticalDistortionStrength: 0.012
     - _VerticalNoiseDistortionStrength: 0.02
     - _VerticalNoiseSpeed: 0.13
     m_Colors:
