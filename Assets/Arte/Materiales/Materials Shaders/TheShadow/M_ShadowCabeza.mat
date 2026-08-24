@@ -59,10 +59,10 @@ Material:
     - _QueueOffset: 0
     - _TwirlAmount: -0.1
     - _TwirlAmount_2: -0.11
-    - _WoobyAmount: 0.05
-    - _WoobyFrecuency: 0.09
+    - _WoobyAmount: 0.02
+    - _WoobyFrecuency: 0.03
     - _WoobyIntensity: 0
-    - _WoobySpeed: 16.16
+    - _WoobySpeed: 21.7
     m_Colors:
     - _Color: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
     - _ColorBase: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}

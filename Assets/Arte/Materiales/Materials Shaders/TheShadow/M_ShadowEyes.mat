@@ -55,12 +55,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Add: 16.1
+    - _Add: 1.3
     - _Intensity: 3
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Sine: -17.9
-    - _Velocity: 32.73
+    - _Sine: 7.08
+    - _Velocity: 25
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _Color_2: {r: 1, g: 1, b: 1, a: 1}
