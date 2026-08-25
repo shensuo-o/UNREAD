@@ -18,32 +18,32 @@ public class ShadowDistortionController : MonoBehaviour
 
     [Header("MICRO-MIN")]
 
-    [SerializeField] private float microMinNoiseDistortionStrength = 0.0003f;
-    [SerializeField] private float microMinVerticalDistortionStrength = 0.00005f;
-    [SerializeField] private float microMinChromaticAberrationStrength = 0.000025f;
-    [SerializeField] private float microMinCRTScanlineStrength = 0.00015f;
-    [SerializeField] private float microMinCRTJitterStrength = 0.00002f;
-    [SerializeField] private float microMinCRTWobbleStrength = 0.00003f;
-    [SerializeField] private float microMinCRTGlitchStrength = 0.0002f;
-    [SerializeField] private float microMinCRTGlitchIntensity = 0.005f;
-    [SerializeField] private float microMinCRTIntensityVariation = 0.001f;
+    [SerializeField] private float microMinNoiseDistortionStrength = 0.00020f;
+    [SerializeField] private float microMinVerticalDistortionStrength = 0.00004f;
+    [SerializeField] private float microMinChromaticAberrationStrength = 0.000008f;
+    [SerializeField] private float microMinCRTScanlineStrength = 0.00009f;
+    [SerializeField] private float microMinCRTJitterStrength = 0.000009f;
+    [SerializeField] private float microMinCRTWobbleStrength = 0.00002f;
+    [SerializeField] private float microMinCRTGlitchStrength = 0.00009f;
+    [SerializeField] private float microMinCRTGlitchIntensity = 0.002f;
+    [SerializeField] private float microMinCRTIntensityVariation = 0.0004f;
 
 
     // =========================================================
-    // BASE
+    // MICRO
     // =========================================================
 
-    [Header("BASE")]
+    [Header("MICRO")]
 
-    [SerializeField] private float baseNoiseDistortionStrength = 0.03f;
-    [SerializeField] private float baseVerticalDistortionStrength = 0.005f;
-    [SerializeField] private float baseChromaticAberrationStrength = 0.0025f;
-    [SerializeField] private float baseCRTScanlineStrength = 0.015f;
-    [SerializeField] private float baseCRTJitterStrength = 0.002f;
-    [SerializeField] private float baseCRTWobbleStrength = 0.003f;
-    [SerializeField] private float baseCRTGlitchStrength = 0.02f;
-    [SerializeField] private float baseCRTGlitchIntensity = 0.5f;
-    [SerializeField] private float baseCRTIntensityVariation = 0.1f;
+    [SerializeField] private float microNoiseDistortionStrength = 0.00030f;
+    [SerializeField] private float microVerticalDistortionStrength = 0.00005f;
+    [SerializeField] private float microChromaticAberrationStrength = 0.000012f;
+    [SerializeField] private float microCRTScanlineStrength = 0.00015f;
+    [SerializeField] private float microCRTJitterStrength = 0.000018f;
+    [SerializeField] private float microCRTWobbleStrength = 0.00003f;
+    [SerializeField] private float microCRTGlitchStrength = 0.00020f;
+    [SerializeField] private float microCRTGlitchIntensity = 0.005f;
+    [SerializeField] private float microCRTIntensityVariation = 0.001f;
 
 
     // =========================================================
@@ -52,15 +52,15 @@ public class ShadowDistortionController : MonoBehaviour
 
     [Header("MEDIO")]
 
-    [SerializeField] private float mediumNoiseDistortionStrength = 0.035f;
-    [SerializeField] private float mediumVerticalDistortionStrength = 0.0055f;
-    [SerializeField] private float mediumChromaticAberrationStrength = 0.003f;
-    [SerializeField] private float mediumCRTScanlineStrength = 0.017f;
-    [SerializeField] private float mediumCRTJitterStrength = 0.0025f;
-    [SerializeField] private float mediumCRTWobbleStrength = 0.004f;
-    [SerializeField] private float mediumCRTGlitchStrength = 0.035f;
-    [SerializeField] private float mediumCRTGlitchIntensity = 0.65f;
-    [SerializeField] private float mediumCRTIntensityVariation = 0.18f;
+    [SerializeField] private float mediumNoiseDistortionStrength = 0.00040f;
+    [SerializeField] private float mediumVerticalDistortionStrength = 0.00007f;
+    [SerializeField] private float mediumChromaticAberrationStrength = 0.000015f;
+    [SerializeField] private float mediumCRTScanlineStrength = 0.00020f;
+    [SerializeField] private float mediumCRTJitterStrength = 0.000025f;
+    [SerializeField] private float mediumCRTWobbleStrength = 0.00004f;
+    [SerializeField] private float mediumCRTGlitchStrength = 0.00025f;
+    [SerializeField] private float mediumCRTGlitchIntensity = 0.007f;
+    [SerializeField] private float mediumCRTIntensityVariation = 0.0015f;
 
 
     // =========================================================
@@ -69,15 +69,15 @@ public class ShadowDistortionController : MonoBehaviour
 
     [Header("MAXIMO")]
 
-    [SerializeField] private float maxNoiseDistortionStrength = 0.05f;
-    [SerializeField] private float maxVerticalDistortionStrength = 0.007f;
-    [SerializeField] private float maxChromaticAberrationStrength = 0.004f;
-    [SerializeField] private float maxCRTScanlineStrength = 0.020f;
-    [SerializeField] private float maxCRTJitterStrength = 0.0035f;
-    [SerializeField] private float maxCRTWobbleStrength = 0.005f;
-    [SerializeField] private float maxCRTGlitchStrength = 0.05f;
-    [SerializeField] private float maxCRTGlitchIntensity = 0.9f;
-    [SerializeField] private float maxCRTIntensityVariation = 0.25f;
+    [SerializeField] private float maxNoiseDistortionStrength = 0.035f;
+    [SerializeField] private float maxVerticalDistortionStrength = 0.0055f;
+    [SerializeField] private float maxChromaticAberrationStrength = 0.0006f;
+    [SerializeField] private float maxCRTScanlineStrength = 0.017f;
+    [SerializeField] private float maxCRTJitterStrength = 0.0022f;
+    [SerializeField] private float maxCRTWobbleStrength = 0.0035f;
+    [SerializeField] private float maxCRTGlitchStrength = 0.023f;
+    [SerializeField] private float maxCRTGlitchIntensity = 0.55f;
+    [SerializeField] private float maxCRTIntensityVariation = 0.12f;
 
 
     // =========================================================
@@ -205,7 +205,7 @@ public class ShadowDistortionController : MonoBehaviour
 
 
         // =====================================================
-        // MICRO-MIN -> BASE
+        // MICRO-MIN -> MICRO
         // 0 -> 0.20
         // =====================================================
 
@@ -216,62 +216,62 @@ public class ShadowDistortionController : MonoBehaviour
 
             noiseDistortion = Mathf.Lerp(
                 microMinNoiseDistortionStrength,
-                baseNoiseDistortionStrength,
+                microNoiseDistortionStrength,
                 t
             );
 
             verticalDistortion = Mathf.Lerp(
                 microMinVerticalDistortionStrength,
-                baseVerticalDistortionStrength,
+                microVerticalDistortionStrength,
                 t
             );
 
             chromaticAberration = Mathf.Lerp(
                 microMinChromaticAberrationStrength,
-                baseChromaticAberrationStrength,
+                microChromaticAberrationStrength,
                 t
             );
 
             scanline = Mathf.Lerp(
                 microMinCRTScanlineStrength,
-                baseCRTScanlineStrength,
+                microCRTScanlineStrength,
                 t
             );
 
             jitter = Mathf.Lerp(
                 microMinCRTJitterStrength,
-                baseCRTJitterStrength,
+                microCRTJitterStrength,
                 t
             );
 
             wobble = Mathf.Lerp(
                 microMinCRTWobbleStrength,
-                baseCRTWobbleStrength,
+                microCRTWobbleStrength,
                 t
             );
 
             glitchStrength = Mathf.Lerp(
                 microMinCRTGlitchStrength,
-                baseCRTGlitchStrength,
+                microCRTGlitchStrength,
                 t
             );
 
             glitchIntensity = Mathf.Lerp(
                 microMinCRTGlitchIntensity,
-                baseCRTGlitchIntensity,
+                microCRTGlitchIntensity,
                 t
             );
 
             intensityVariation = Mathf.Lerp(
                 microMinCRTIntensityVariation,
-                baseCRTIntensityVariation,
+                microCRTIntensityVariation,
                 t
             );
         }
 
 
         // =====================================================
-        // BASE -> MEDIO
+        // MICRO -> MEDIO
         // 0.20 -> 0.60
         // =====================================================
 
@@ -281,55 +281,55 @@ public class ShadowDistortionController : MonoBehaviour
 
 
             noiseDistortion = Mathf.Lerp(
-                baseNoiseDistortionStrength,
+                microNoiseDistortionStrength,
                 mediumNoiseDistortionStrength,
                 t
             );
 
             verticalDistortion = Mathf.Lerp(
-                baseVerticalDistortionStrength,
+                microVerticalDistortionStrength,
                 mediumVerticalDistortionStrength,
                 t
             );
 
             chromaticAberration = Mathf.Lerp(
-                baseChromaticAberrationStrength,
+                microChromaticAberrationStrength,
                 mediumChromaticAberrationStrength,
                 t
             );
 
             scanline = Mathf.Lerp(
-                baseCRTScanlineStrength,
+                microCRTScanlineStrength,
                 mediumCRTScanlineStrength,
                 t
             );
 
             jitter = Mathf.Lerp(
-                baseCRTJitterStrength,
+                microCRTJitterStrength,
                 mediumCRTJitterStrength,
                 t
             );
 
             wobble = Mathf.Lerp(
-                baseCRTWobbleStrength,
+                microCRTWobbleStrength,
                 mediumCRTWobbleStrength,
                 t
             );
 
             glitchStrength = Mathf.Lerp(
-                baseCRTGlitchStrength,
+                microCRTGlitchStrength,
                 mediumCRTGlitchStrength,
                 t
             );
 
             glitchIntensity = Mathf.Lerp(
-                baseCRTGlitchIntensity,
+                microCRTGlitchIntensity,
                 mediumCRTGlitchIntensity,
                 t
             );
 
             intensityVariation = Mathf.Lerp(
-                baseCRTIntensityVariation,
+                microCRTIntensityVariation,
                 mediumCRTIntensityVariation,
                 t
             );

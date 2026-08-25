@@ -1432,33 +1432,33 @@ MonoBehaviour:
   microMinCRTGlitchStrength: 0.002
   microMinCRTGlitchIntensity: 0.05
   microMinCRTIntensityVariation: 0.01
-  baseNoiseDistortionStrength: 0.03
-  baseVerticalDistortionStrength: 0.005
-  baseChromaticAberrationStrength: 0.0025
-  baseCRTScanlineStrength: 0.015
-  baseCRTJitterStrength: 0.002
-  baseCRTWobbleStrength: 0.003
-  baseCRTGlitchStrength: 0.02
-  baseCRTGlitchIntensity: 0.5
-  baseCRTIntensityVariation: 0.1
-  mediumNoiseDistortionStrength: 0.05
-  mediumVerticalDistortionStrength: 0.008
-  mediumChromaticAberrationStrength: 0.005
-  mediumCRTScanlineStrength: 0.02
-  mediumCRTJitterStrength: 0.004
-  mediumCRTWobbleStrength: 0.006
-  mediumCRTGlitchStrength: 0.05
-  mediumCRTGlitchIntensity: 1
-  mediumCRTIntensityVariation: 0.3
-  maxNoiseDistortionStrength: 0.08
-  maxVerticalDistortionStrength: 0.012
-  maxChromaticAberrationStrength: 0.008
-  maxCRTScanlineStrength: 0.025
-  maxCRTJitterStrength: 0.007
-  maxCRTWobbleStrength: 0.01
-  maxCRTGlitchStrength: 0.1
-  maxCRTGlitchIntensity: 2
-  maxCRTIntensityVariation: 0.3
+  microNoiseDistortionStrength: 0.0002
+  microVerticalDistortionStrength: 0.000035
+  microChromaticAberrationStrength: 0.0000075
+  microCRTScanlineStrength: 0.0001
+  microCRTJitterStrength: 0.000012
+  microCRTWobbleStrength: 0.00002
+  microCRTGlitchStrength: 0.00012
+  microCRTGlitchIntensity: 0.003
+  microCRTIntensityVariation: 0.0006
+  mediumNoiseDistortionStrength: 0.0003
+  mediumVerticalDistortionStrength: 0.00005
+  mediumChromaticAberrationStrength: 0.00001
+  mediumCRTScanlineStrength: 0.00015
+  mediumCRTJitterStrength: 0.00002
+  mediumCRTWobbleStrength: 0.00003
+  mediumCRTGlitchStrength: 0.0002
+  mediumCRTGlitchIntensity: 0.005
+  mediumCRTIntensityVariation: 0.001
+  maxNoiseDistortionStrength: 0.03
+  maxVerticalDistortionStrength: 0.005
+  maxChromaticAberrationStrength: 0.0005
+  maxCRTScanlineStrength: 0.015
+  maxCRTJitterStrength: 0.002
+  maxCRTWobbleStrength: 0.003
+  maxCRTGlitchStrength: 0.02
+  maxCRTGlitchIntensity: 0.5
+  maxCRTIntensityVariation: 0.1
 --- !u!4 &192810424
 Transform:
   m_ObjectHideFlags: 0
