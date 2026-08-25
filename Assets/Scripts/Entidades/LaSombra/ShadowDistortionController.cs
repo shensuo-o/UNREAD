@@ -13,6 +13,35 @@ public class ShadowDistortionController : MonoBehaviour
 
 
     // =========================================================
+    // INTENSIDADES
+    // =========================================================
+
+    private float distanceIntensity;
+    private float lookIntensity;
+
+
+    // =========================================================
+    // OSCURECIMIENTO POR MIRAR A LA SOMBRA
+    // =========================================================
+
+    [Header("Shadow Death Fade")]
+
+    // Qué tan concentrado está el oscurecimiento hacia el final.
+    // Más alto = tarda más en ponerse oscuro.
+    [SerializeField] private float shadowDeathFadePower = 6f;
+
+    // Qué tan suave es la transición del oscurecimiento.
+    // Más alto = más lento y suave.
+    [SerializeField] private float shadowDeathFadeSmoothTime = 1f;
+
+    // Valor actual que está usando el shader.
+    private float currentShadowDeathFade;
+
+    // Velocidad interna utilizada por SmoothDamp.
+    private float shadowDeathFadeVelocity;
+
+
+    // =========================================================
     // MICRO-MINIMO
     // =========================================================
 
@@ -116,27 +145,15 @@ public class ShadowDistortionController : MonoBehaviour
         }
 
 
-        // Empieza completamente apagado.
         distortionFeature.SetActive(false);
 
-        // Imagen original.
         SetDistortionBlend(0f);
-    }
 
+        // NUEVO
+        currentShadowDeathFade = 0f;
+        shadowDeathFadeVelocity = 0f;
 
-    // =========================================================
-    // AL SALIR DE PLAY
-    // =========================================================
-
-    private void OnDisable()
-    {
-        if (distortionFeature != null)
-        {
-            distortionFeature.SetActive(false);
-        }
-
-        // Dejamos el material limpio al salir de Play.
-        SetDistortionBlend(0f);
+        SetShadowDeathFade(0f);
     }
 
 
@@ -154,6 +171,111 @@ public class ShadowDistortionController : MonoBehaviour
 
 
     // =========================================================
+    // INTENSIDAD POR DISTANCIA
+    // =========================================================
+
+    public void SetDistanceIntensity(float intensity)
+    {
+        distanceIntensity = Mathf.Clamp01(intensity);
+
+        UpdateFinalIntensity();
+    }
+
+
+    // =========================================================
+    // INTENSIDAD POR MIRADA
+    // =========================================================
+
+    public void SetLookIntensity(float intensity)
+    {
+        lookIntensity = Mathf.Clamp01(intensity);
+
+
+        // =====================================================
+        // OSCURECIMIENTO POR MIRAR
+        // =====================================================
+
+        // Primero hacemos que el oscurecimiento aparezca
+        // principalmente hacia el final.
+
+        float targetDeathFade = Mathf.Pow(
+            lookIntensity,
+            shadowDeathFadePower
+        );
+
+
+        // =====================================================
+        // TRANSICIÓN SUAVE
+        // =====================================================
+
+        // En lugar de mandar el valor directamente al shader,
+        // lo hacemos llegar suavemente.
+
+        currentShadowDeathFade = Mathf.SmoothDamp(
+            currentShadowDeathFade,
+            targetDeathFade,
+            ref shadowDeathFadeVelocity,
+            shadowDeathFadeSmoothTime
+        );
+
+
+        SetShadowDeathFade(
+            currentShadowDeathFade
+        );
+
+
+        // =====================================================
+        // CRT ORIGINAL
+        // =====================================================
+
+        UpdateFinalIntensity();
+    }
+
+
+    // =========================================================
+    // APLICAR OSCURECIMIENTO AL SHADER
+    // =========================================================
+
+    private void SetShadowDeathFade(float fade)
+    {
+        if (distortionMaterial == null)
+            return;
+
+
+        fade = Mathf.Clamp01(fade);
+
+
+        distortionMaterial.SetFloat(
+            "_ShadowDeathFade",
+            fade
+        );
+    }
+
+
+    // =========================================================
+    // INTENSIDAD FINAL
+    // =========================================================
+
+    private void UpdateFinalIntensity()
+    {
+        float finalIntensity = Mathf.Max(
+            distanceIntensity,
+            lookIntensity
+        );
+
+
+        SetDistortionEnabled(
+            finalIntensity > 0f
+        );
+
+
+        SetDistortionIntensity(
+            finalIntensity
+        );
+    }
+
+
+    // =========================================================
     // DISTORTION BLEND
     // =========================================================
 
@@ -162,7 +284,9 @@ public class ShadowDistortionController : MonoBehaviour
         if (distortionMaterial == null)
             return;
 
+
         blend = Mathf.Clamp01(blend);
+
 
         distortionMaterial.SetFloat(
             "_DistortionBlend",
@@ -180,6 +304,7 @@ public class ShadowDistortionController : MonoBehaviour
         if (distortionMaterial == null)
             return;
 
+
         intensity = Mathf.Clamp01(intensity);
 
 
@@ -187,7 +312,6 @@ public class ShadowDistortionController : MonoBehaviour
         // BLEND
         // =====================================================
 
-        // Máximo de Blend = 0.5
         SetDistortionBlend(
             intensity * 0.5f
         );
@@ -450,5 +574,28 @@ public class ShadowDistortionController : MonoBehaviour
             "_CRTIntensityVariation",
             intensityVariation
         );
+    }
+
+
+    // =========================================================
+    // AL SALIR DE PLAY
+    // =========================================================
+
+    private void OnDisable()
+    {
+        if (distortionFeature != null)
+        {
+            distortionFeature.SetActive(false);
+        }
+
+
+        SetDistortionBlend(0f);
+
+
+        // NUEVO
+        currentShadowDeathFade = 0f;
+        shadowDeathFadeVelocity = 0f;
+
+        SetShadowDeathFade(0f);
     }
 }

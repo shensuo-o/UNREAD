@@ -46,28 +46,20 @@ public class TheShadow : EntidadBase
 
 
         // =====================================================
-        // DISTORSIÓN DE LA SOMBRA
+        // DISTORSIÓN POR DISTANCIA
         // =====================================================
 
         if (DistortionController != null)
         {
-            // Más de 35m = apagado.
-            // 35m = comienza.
-            // 20m = medio.
-            // 10m = máximo.
-
-            bool distortionEnabled = dist <= 35f;
-
-            DistortionController.SetDistortionEnabled(
-                distortionEnabled
-            );
+            float distanceIntensity = 0f;
 
 
-            if (distortionEnabled)
+            // Más de 35m = 0
+            // 35m = comienza
+            // 10m = máximo
+
+            if (dist <= 35f)
             {
-                // 35m = 0
-                // 10m = 1
-
                 float rawIntensity = Mathf.InverseLerp(
                     35f,
                     10f,
@@ -75,24 +67,16 @@ public class TheShadow : EntidadBase
                 );
 
 
-                // Hace que el efecto aparezca
-                // lentamente al principio.
-                float intensity = Mathf.Pow(
+                distanceIntensity = Mathf.Pow(
                     rawIntensity,
                     2.5f
                 );
+            }
 
 
-                DistortionController.SetDistortionIntensity(
-                    intensity
-                );
-            }
-            else
-            {
-                DistortionController.SetDistortionBlend(
-                    0f
-                );
-            }
+            DistortionController.SetDistanceIntensity(
+                distanceIntensity
+            );
         }
 
 

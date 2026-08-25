@@ -71,6 +71,7 @@ Material:
     - _NoiseDistortionStrength: 0.029999997
     - _NoiseSpeed: 0.2
     - _ScreenZoom: 0.95
+    - _ShadowDeathFade: 0
     - _TestOffset: 0.001
     - _VerticalDistortionNoiseScale: 12
     - _VerticalDistortionStrength: 0.0049999994
