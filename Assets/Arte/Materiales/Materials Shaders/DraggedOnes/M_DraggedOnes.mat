@@ -59,7 +59,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FresnelPower: 4
+    - _FresnelPower: 1
     - _Fresnel_Power: 4
     - _NoiseScale: 10
     - _NoiseSpeed: 0.1
@@ -67,6 +67,7 @@ Material:
     - _Noise_Speed: 0.15
     - _OilDisplacement: 0.02
     - _OilFlowScale: 2
+    - _OilIRidescenceStrength: 1
     - _OilMetallic: 0.15
     - _OilMovementSpeed: 0.1
     - _OilNoiseScale: 4
@@ -89,6 +90,10 @@ Material:
     - _SlimeMovementSpeed: 0.1
     - _SlimeNoiseScale: 20
     - _SlimeNoiseSpeed: 0.03
+    - _SlimePoolingDisplacement: 0.03
+    - _SlimePoolingDisplacementMax: 0.43
+    - _SlimePoolingSpeed: 0.02
+    - _SlimePoolingStrength: -10
     - _SlimeSurfaceDirectionY: 1
     - _SlimeSurfaceMovementSpeed: 0.015
     - _SlimeSurfaceScale: 1.9
@@ -97,8 +102,9 @@ Material:
     - _SlimeVerticalStretch: 0.3
     m_Colors:
     - _OilColor: {r: 0.003921569, g: 0.007843138, b: 0.011764706, a: 1}
-    - _OilReflectionColor: {r: 0.107226744, g: 0, b: 0.34117648, a: 1}
+    - _OilReflectionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Oil_Color: {r: 0.01960784, g: 0.02352941, b: 0.03137255, a: 1}
     - _Oil_Reflection_Color: {r: 0.0146849435, g: 0.050125234, b: 0.2830189, a: 1}
+    - _SlimePoolingDirection: {r: -0.3, g: 0.15, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
