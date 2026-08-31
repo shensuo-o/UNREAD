@@ -288,10 +288,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5963285329683707779, guid: bba7252724bcc494d8d349594756544b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 996ec68c1d0fddd49828f389c3e11198, type: 2}
+    - target: {fileID: -5963285329683707779, guid: bba7252724bcc494d8d349594756544b, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 996ec68c1d0fddd49828f389c3e11198, type: 2}
     - target: {fileID: 919132149155446097, guid: bba7252724bcc494d8d349594756544b, type: 3}
       propertyPath: m_Name
       value: ModeloTest
       objectReference: {fileID: 0}
+    - target: {fileID: 7014716963316244695, guid: bba7252724bcc494d8d349594756544b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 996ec68c1d0fddd49828f389c3e11198, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -345,10 +357,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5963285329683707779, guid: 98306dc7b4d6ee74a9115ffd00425ca3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 996ec68c1d0fddd49828f389c3e11198, type: 2}
+    - target: {fileID: -5963285329683707779, guid: 98306dc7b4d6ee74a9115ffd00425ca3, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 996ec68c1d0fddd49828f389c3e11198, type: 2}
     - target: {fileID: 919132149155446097, guid: 98306dc7b4d6ee74a9115ffd00425ca3, type: 3}
       propertyPath: m_Name
       value: A_Arrastrado_Attack
       objectReference: {fileID: 0}
+    - target: {fileID: 7014716963316244695, guid: 98306dc7b4d6ee74a9115ffd00425ca3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 996ec68c1d0fddd49828f389c3e11198, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2151,6 +2175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1238974735}
   - component: {fileID: 1238974736}
+  - component: {fileID: 1238974737}
   m_Layer: 0
   m_Name: Trails
   m_TagString: Untagged
@@ -2232,13 +2257,22 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.25619835
-        inSlope: 0
-        outSlope: 0
+        value: 0.25619832
+        inSlope: -0.24793392
+        outSlope: -0.24793392
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.16666667
+      - serializedVersion: 3
+        time: 1
+        value: 0.041325092
+        inSlope: -0.18644625
+        outSlope: -0.18644625
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.17730498
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -2246,8 +2280,8 @@ TrailRenderer:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
+      key2: {r: 0, g: 0, b: 0, a: 0.6666667}
+      key3: {r: 0, g: 0, b: 0, a: 0.5019608}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
@@ -2261,17 +2295,17 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
+      atime1: 45875
+      atime2: 52428
+      atime3: 58982
+      atime4: 65535
+      atime5: 65535
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 5
     numCornerVertices: 4
     numCapVertices: 4
     alignment: 0
@@ -2283,6 +2317,21 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1238974737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238974734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82544218fe01ef42beda117c52b6c6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BabaTrailSway
+  amplitude: 0.5
+  frequency: 2
+  startLocalPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1480116256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,10 +2879,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5963285329683707779, guid: 42f4e02455c8708479b487e3016fb915, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 996ec68c1d0fddd49828f389c3e11198, type: 2}
+    - target: {fileID: -5963285329683707779, guid: 42f4e02455c8708479b487e3016fb915, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 996ec68c1d0fddd49828f389c3e11198, type: 2}
     - target: {fileID: 919132149155446097, guid: 42f4e02455c8708479b487e3016fb915, type: 3}
       propertyPath: m_Name
       value: A_Arrastrado_Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 7014716963316244695, guid: 42f4e02455c8708479b487e3016fb915, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 996ec68c1d0fddd49828f389c3e11198, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
