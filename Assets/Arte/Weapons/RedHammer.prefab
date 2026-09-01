@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 468654970572897042}
   - component: {fileID: 5109809946614437364}
   - component: {fileID: 5822654844043634651}
+  - component: {fileID: 6973722918474320295}
   m_Layer: 3
   m_Name: RedHammer
   m_TagString: Untagged
@@ -184,14 +185,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MeleeAttack
   CastPoint1: {fileID: 4172514250529097155}
   CastRadious: 0.3
-  WeaponAnimator: {fileID: 5109809946614437364}
-  AttackClip: {fileID: 7400000, guid: f2fc908225e4cca4d96dde00f745a3b0, type: 2}
+  PlayerAnimator: {fileID: 0}
   ShouldCast: 0
   Mask:
     serializedVersion: 2
     m_Bits: 384
   Hits: []
   Damage: 10
+--- !u!114 &6973722918474320295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933706468774288479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b976387fb7b17f41b7a87c9d9205b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EquippableItem
+  EquippedType: 2
 --- !u!1 &2420575114729273769
 GameObject:
   m_ObjectHideFlags: 0
