@@ -3,8 +3,9 @@ using UnityEngine;
 public class RangedAttack : MonoBehaviour
 {
     [SerializeField] private Transform CastPoint1;
-    [SerializeField] private Animator WeaponAnimator;
-    [SerializeField] private AnimationClip AttackClip;
+    [SerializeField] private Animator PlayerAnimator;
+    //[SerializeField] private Animator WeaponAnimator;
+    //[SerializeField] private AnimationClip AttackClip;
     [SerializeField] private RaycastHit HitInfo;
     [SerializeField] private bool ShouldCast;
     [SerializeField] private LayerMask Mask;
@@ -31,12 +32,16 @@ public class RangedAttack : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && ShouldCast && AmmoLeft > 0)
         {
             AmmoLeft--;
-            WeaponAnimator.SetTrigger(AttackClip.name);
+            PlayerAnimator.SetBool("Shoot", true);
             HitBoxCast();
         }
         else if (Input.GetMouseButtonDown(0) && ShouldCast && AmmoLeft == 0 && TotalAmmo > 0)
         {
             Reload();
+        }
+        else
+        {
+            PlayerAnimator.SetBool("Shoot", false);
         }
     }
 
