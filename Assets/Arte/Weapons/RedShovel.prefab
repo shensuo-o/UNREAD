@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 38583766448727499}
   - component: {fileID: 5056862907024445312}
   - component: {fileID: 5428597395732533133}
+  - component: {fileID: -1011762920249220443}
   m_Layer: 10
   m_Name: RedShovel
   m_TagString: Untagged
@@ -74,8 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MeleeAttack
   CastPoint1: {fileID: 6960459786659509635}
   CastRadious: 0.3
-  WeaponAnimator: {fileID: 1220314504831400739}
-  AttackClip: {fileID: 7400000, guid: f2fc908225e4cca4d96dde00f745a3b0, type: 2}
+  PlayerAnimator: {fileID: 0}
   ShouldCast: 0
   Mask:
     serializedVersion: 2
@@ -119,6 +119,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.35, y: 1.2, z: 0.15}
   m_Center: {x: 0, y: 0.44, z: 0}
+--- !u!114 &-1011762920249220443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845974978343585523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b976387fb7b17f41b7a87c9d9205b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EquippableItem
+  EquippedType: 2
 --- !u!1 &7136152697218613375
 GameObject:
   m_ObjectHideFlags: 0

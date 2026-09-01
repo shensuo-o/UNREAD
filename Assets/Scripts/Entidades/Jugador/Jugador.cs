@@ -72,6 +72,12 @@ public class Jugador : EntidadBase
 
     #endregion
 
+    #region Animations
+
+    [Header("Animator")]
+    [SerializeField] private Animator animator;
+
+    #endregion
 
     private void Awake()
     {
@@ -89,6 +95,9 @@ public class Jugador : EntidadBase
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
     }
 
 
@@ -99,7 +108,7 @@ public class Jugador : EntidadBase
             MoveCamara();
             Movement();
             SprintAndCrouch();
-
+            UpdateAnimatorParams();
             CheckShadowLook();
         }
     }
@@ -410,9 +419,30 @@ public class Jugador : EntidadBase
 
     #endregion
 
+    #region AnimationFunctions
+
+    private void UpdateAnimatorParams()
+    {
+        bool isMoving = Direction.magnitude > 0.1f;
+        bool isSprinting = Input.GetKey(KeyCode.LeftShift);
+        bool isCrouching = Input.GetKey(KeyCode.LeftControl);
+
+        animator.SetBool("Walking", isMoving && !isSprinting);
+        animator.SetBool("Running", isMoving && isSprinting);
+        animator.SetBool("IsCrouch", isCrouching);
+        animator.SetBool("Jump", !IsGrounded);
+    }
+
+    #endregion
 
     public void TakeDamage(int damage)
     {
         HP -= damage;
+
+        if (HP <= 0)
+        {
+            animator.SetBool("DeathAnim", true);
+            enabled = false;
+        }
     }
 }

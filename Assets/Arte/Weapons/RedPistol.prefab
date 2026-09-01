@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 5742386732264825043}
   - component: {fileID: 3416332973018802698}
   - component: {fileID: 5528685715895250465}
+  - component: {fileID: -3542205183743722335}
   m_Layer: 10
   m_Name: RedPistol
   m_TagString: Untagged
@@ -284,8 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RangedAttack
   CastPoint1: {fileID: 2768062637134606161}
-  WeaponAnimator: {fileID: 3953137731190159109}
-  AttackClip: {fileID: 7400000, guid: e204fb8630a23f9439c93182208f4247, type: 2}
+  PlayerAnimator: {fileID: 0}
   ShouldCast: 1
   Mask:
     serializedVersion: 2
@@ -331,3 +331,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1, y: 0.3, z: 0.6}
   m_Center: {x: 0, y: -0.09, z: 0.15}
+--- !u!114 &-3542205183743722335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7266778176558088549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b976387fb7b17f41b7a87c9d9205b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EquippableItem
+  EquippedType: 3

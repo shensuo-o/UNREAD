@@ -26,10 +26,18 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler, I
                     if (IsEquipment)
                     {
                         obj.SetActive(true);
+
+                        EquippableItem equippable = obj.GetComponent<EquippableItem>();
+                        if (equippable != null)
+                            WeaponEquip.Instance.Equip(equippable.EquippedType);
                     }
                     else
                     {
                         obj.SetActive(false);
+
+                        EquippableItem equippable = obj.GetComponent<EquippableItem>();
+                        if (equippable != null)
+                            WeaponEquip.Instance.Equip(0);
                     }
                 }
             }

@@ -4,8 +4,9 @@ public class MeleeAttack : MonoBehaviour
 {
     [SerializeField] private Transform CastPoint1;
     [SerializeField] private float CastRadious;
-    [SerializeField] private Animator WeaponAnimator;
-    [SerializeField] private AnimationClip AttackClip;
+    [SerializeField] private Animator PlayerAnimator;
+    //[SerializeField] private Animator WeaponAnimator;
+    //[SerializeField] private AnimationClip AttackClip;
     [SerializeField] private bool ShouldCast;
     [SerializeField] private LayerMask Mask;
     public Collider[] Hits;
@@ -24,7 +25,11 @@ public class MeleeAttack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            WeaponAnimator.SetTrigger(AttackClip.name);
+            PlayerAnimator.SetBool("Attack", true);
+        }
+        else
+        {
+            PlayerAnimator.SetBool("Attack", false);
         }
     }
 
