@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 6729899108296309581}
   - component: {fileID: 8886066435582968086}
   - component: {fileID: 5286734077450381463}
+  - component: {fileID: 5038771623847396320}
   - component: {fileID: -1448940945787118575}
   m_Layer: 3
   m_Name: Jugador
@@ -363,6 +364,20 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   HasItemNeeded: 0
+--- !u!114 &5038771623847396320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954461051472476279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17aefd7d035a6774abc85e6940b30176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponEquip
+  animator: {fileID: -1448940945787118575}
+  ArmOverlayLayerName: ArmOverlay
 --- !u!95 &-1448940945787118575
 Animator:
   serializedVersion: 7
