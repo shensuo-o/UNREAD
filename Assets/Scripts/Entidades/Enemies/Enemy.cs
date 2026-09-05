@@ -51,6 +51,9 @@ public class Enemy : MonoBehaviour
     public Action OnStartSearch;
     public Action OnExhausted;
 
+    [Header("Animation")]
+    public Animator animator;
+
     private void Awake()
     {
         stateMachine = new EnemyMachine();

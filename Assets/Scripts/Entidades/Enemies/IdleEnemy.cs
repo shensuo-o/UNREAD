@@ -13,6 +13,7 @@ public class IdleEnemy : IEnemyState
     public void Enter()
     {
         SetNewDestination();
+        enemy.animator.SetBool("IsWalking", true);
     }
 
     public void Tick()

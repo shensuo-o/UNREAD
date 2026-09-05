@@ -298,7 +298,7 @@ MonoBehaviour:
   Enabled: 1
   Amplitud: 0.005
   Frecuencia: 15
-  NegativeEffect: 0
+  NegativeEffect: 0.3
   Camara: {fileID: 1026256416105178842}
   CameraHolder: {fileID: 7520047030637619746}
   ToggleSpeed: 2

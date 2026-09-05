@@ -135,7 +135,7 @@ public class Jugador : EntidadBase
         CameraCap = Mathf.Clamp(
             CameraCap,
             -85f,
-            85f
+            68f
         );
 
         Camara.localEulerAngles =
@@ -210,22 +210,22 @@ public class Jugador : EntidadBase
         {
             Speed = HighSpeed;
 
-            HeadBobbing.Frecuencia = 25;
-            HeadBobbing.Amplitud = 0.015f;
+            //HeadBobbing.Frecuencia = 25;
+            //HeadBobbing.Amplitud = 0.015f;
         }
         else if (Input.GetKey(KeyCode.LeftControl))
         {
             Speed = LowSpeed;
 
-            HeadBobbing.Frecuencia = 10;
-            HeadBobbing.Amplitud = 0.005f;
+            //HeadBobbing.Frecuencia = 17;
+            //HeadBobbing.Amplitud = 0.005f;
         }
         else
         {
             Speed = NormalSpeed;
 
-            HeadBobbing.Frecuencia = 15;
-            HeadBobbing.Amplitud = 0.01f;
+            //HeadBobbing.Frecuencia = 10;
+            //HeadBobbing.Amplitud = 0.01f;
         }
     }
 

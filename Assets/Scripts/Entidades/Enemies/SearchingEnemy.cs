@@ -14,6 +14,7 @@ public class SearchingEnemy : IEnemyState
     {
         enemy.OnPlayerDetected += GoToChase;
         timer = 2f;
+        enemy.animator.SetBool("IsWalking", true);
     }
 
     public void Exit()

@@ -19,6 +19,7 @@ public class HiddenEnemy : IEnemyState
         {
             targetPoint = enemy.hiddenPoints[Random.Range(0, enemy.hiddenPoints.Length)];
         }
+        enemy.animator.SetBool("IsWalking", false);
     }
 
     public void Exit()

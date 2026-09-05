@@ -22,7 +22,9 @@ public class LookingEnemy : IEnemyState
 
         step = 0;
 
-        enemy.agent.isStopped = true; 
+        enemy.agent.isStopped = true;
+
+        enemy.animator.SetBool("IsWalking", false);
     }
 
     public void Exit()

@@ -38,6 +38,10 @@ public class LightsOff : MonoBehaviour
 
         TurnOffGroup(lightsGroup3);
         lightSound3.Play();
+
+        //Testeo de CluesManager
+        CluesManager.instance.GiveClue("'Better watch my step.'", "'Its so dark. I need a flashlight'");
+        //El texto pasarian a ser variables en el script;
     }
 
     private void TurnOffGroup(List<GameObject> group)

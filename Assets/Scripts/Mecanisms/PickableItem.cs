@@ -6,6 +6,8 @@ public class PickableItem : MonoBehaviour
     public Vector3 WorkingPosition;
     public Behaviour ActiveComponent;
     public Transform Parent;
+    public string clueForPlayer;
+    public string repeatClue;
 
     public void Picked()
     {
@@ -19,6 +21,9 @@ public class PickableItem : MonoBehaviour
         {
             this.gameObject.GetComponent<Animator>().enabled = true;
         }
+
+        CluesManager.instance.GiveClue(clueForPlayer, repeatClue);
+
         this.gameObject.SetActive(false);
     }
 }

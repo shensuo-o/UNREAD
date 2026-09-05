@@ -12,6 +12,8 @@ public class ChaseEnemy : IEnemyState
     public void Enter()
     {
         enemy.agent.isStopped = false;
+        enemy.animator.SetTrigger("Attack");
+        enemy.animator.SetBool("IsWalking", true);
     }
 
     public void Tick()

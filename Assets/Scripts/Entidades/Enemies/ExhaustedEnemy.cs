@@ -14,6 +14,7 @@ public class ExhaustedEnemy : IEnemyState
     {
         enemy.agent.isStopped = true;
         timer = 0f;
+        enemy.animator.SetBool("IsWalking", false);
     }
 
     public void Tick()
