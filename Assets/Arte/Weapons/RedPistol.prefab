@@ -310,6 +310,8 @@ MonoBehaviour:
   WorkingPosition: {x: 0.225, y: -0.12, z: 0.36}
   ActiveComponent: {fileID: 5742386732264825043}
   Parent: {fileID: 0}
+  clueForPlayer: '''This should be useful'''
+  repeatClue: 
 --- !u!65 &5528685715895250465
 BoxCollider:
   m_ObjectHideFlags: 0

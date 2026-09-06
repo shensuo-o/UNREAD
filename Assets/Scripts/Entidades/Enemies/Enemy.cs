@@ -86,7 +86,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            stateMachine.ChangeState(new IdleEnemy(this));
+            stateMachine.ChangeState(new PatrolEnemy(this));
         }
     }
 

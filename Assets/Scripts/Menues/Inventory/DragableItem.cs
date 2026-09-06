@@ -7,7 +7,6 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public Transform ParentAfterDrag;
     public RawImage Image;
     public Camera inspectionCamera;
-    public GameObject worldPrefab;
     private Vector2 startPosition;
     private bool isDragging = false;
 

@@ -51,7 +51,7 @@ public class LookingEnemy : IEnemyState
 
         if (step > 3)
         {
-            enemy.stateMachine.ChangeState(new IdleEnemy(enemy));
+            enemy.stateMachine.ChangeState(new PatrolEnemy(enemy));
         }
     }
 

@@ -99,6 +99,8 @@ public class InventoryManager : MonoBehaviour
             Debug.LogError("No se encontró prefab: " + itemName);
             return;
         }
+        
+        //CAMBIAR PARA QUE LO QUE SE CAMBIA SEA DEL OBJETO INTANCIADO PARA INPECCIONAR Y NO CAMBIAR AL ARCHIVO PREFAB.
 
         GameObject newObj = Instantiate(prefab, inspectionPoint);
         newObj.transform.localPosition = inspectPosition;

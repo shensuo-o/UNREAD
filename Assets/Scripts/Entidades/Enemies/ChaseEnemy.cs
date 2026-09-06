@@ -34,5 +34,6 @@ public class ChaseEnemy : IEnemyState
 
     public void Exit()
     {
+
     }
 }

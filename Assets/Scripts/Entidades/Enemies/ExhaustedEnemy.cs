@@ -45,7 +45,7 @@ public class ExhaustedEnemy : IEnemyState
         }
         else
         {
-            enemy.stateMachine.ChangeState(new IdleEnemy(enemy));
+            enemy.stateMachine.ChangeState(new PatrolEnemy(enemy));
         }
     }
 }

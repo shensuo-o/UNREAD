@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class IdleEnemy : IEnemyState
+public class PatrolEnemy : IEnemyState
 {
     private Enemy enemy;
     private Transform currentTarget;
 
-    public IdleEnemy(Enemy enemy)
+    public PatrolEnemy(Enemy enemy)
     {
         this.enemy = enemy;
     }
