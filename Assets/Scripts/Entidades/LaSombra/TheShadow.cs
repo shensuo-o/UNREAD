@@ -6,6 +6,7 @@ public class TheShadow : EntidadBase
     [SerializeField] private Jugador Player;
     [SerializeField] private NavMeshAgent Agent;
     [SerializeField] private ShadowDistortionController DistortionController;
+    [SerializeField] private Animator animator;
 
     [SerializeField] private float Effect;
 
@@ -13,6 +14,9 @@ public class TheShadow : EntidadBase
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
+
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
 
         if (Player == null)
         {
@@ -26,7 +30,17 @@ public class TheShadow : EntidadBase
         if (Player == null)
             return;
 
+        if (Agent.enabled)
+        {
+            Agent.SetDestination(
+                Player.transform.position
+            );
 
+            bool isMoving = Agent.velocity.magnitude > 0.1f;
+
+            animator.SetBool("Walking", isMoving);
+            animator.SetBool("Idle", !isMoving);
+        }
         // =====================================================
         // MOVIMIENTO
         // =====================================================
