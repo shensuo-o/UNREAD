@@ -21,11 +21,12 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerDownHandler, I
 
             foreach (GameObject obj in InventoryManager.InvInstance.ObjectsInInv)
             {
-                if (obj.name.Contains(draggableItem.Image.texture.name))
+                if (obj.name.Contains("Prefab_" + draggableItem.Image.texture.name))
                 {
                     if (IsEquipment)
                     {
                         obj.SetActive(true);
+                        //obj.transform.position = obj.GetComponent<PickableItem>().WorkingPosition;
 
                         EquippableItem equippable = obj.GetComponent<EquippableItem>();
                         if (equippable != null)

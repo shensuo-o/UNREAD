@@ -314,8 +314,8 @@ Light:
   serializedVersion: 12
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
-  m_Range: 10
+  m_Intensity: 30
+  m_Range: 75
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -677,7 +677,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6566912806961117970}
   - component: {fileID: 1799981465718164329}
-  m_Layer: 0
+  - component: {fileID: 3665029716209237753}
+  - component: {fileID: 2883158729941002380}
+  - component: {fileID: 996301177515713745}
+  m_Layer: 10
   m_Name: Prefab_FlashLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -714,83 +717,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PickableItem
   ItemIcon: {fileID: 2800000, guid: 382afe80a9c371c48801da98bd517dc4, type: 3}
   WorkingPosition: {x: 0.202, y: -0.03, z: 0.468}
-  ActiveComponent: {fileID: 6753691353588316856}
+  WorkingRotation: {x: 0.3991864, y: 0.58365244, z: -0.58365244, w: 0.3991864}
+  ActiveComponent: {fileID: 829663702457411167}
   Parent: {fileID: 0}
   clueForPlayer: '''Now I can go through the dark.'''
   repeatClue: '''I should use the flashlight to find the next door.'''
---- !u!1 &8960763295320391903
-GameObject:
+--- !u!136 &3665029716209237753
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2072280217375148306}
-  - component: {fileID: 6351886015498205557}
-  - component: {fileID: 7390210953526263784}
-  - component: {fileID: 6274457472789276740}
-  - component: {fileID: 7601474565973744621}
-  - component: {fileID: 2423779263152668258}
-  - component: {fileID: 6753691353588316856}
-  m_Layer: 10
-  m_Name: FlashLight
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2072280217375148306
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8960763295320391903}
+  m_GameObject: {fileID: 8872428716370999354}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 890814154846309436}
-  - {fileID: 4935409587449292096}
-  - {fileID: 2285069849442197018}
-  - {fileID: 5476075718452343062}
-  - {fileID: 3762285650810210214}
-  - {fileID: 3134596815385164087}
-  - {fileID: 8655238982960982075}
-  m_Father: {fileID: 6566912806961117970}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &6351886015498205557
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8960763295320391903}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 67e9801eb909f0f46bb62234be4c3e69, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!82 &7390210953526263784
+  m_Radius: 0.04
+  m_Height: 0.3
+  m_Direction: 0
+  m_Center: {x: -0.01, y: 0, z: 0}
+--- !u!82 &2883158729941002380
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8960763295320391903}
+  m_GameObject: {fileID: 8872428716370999354}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -881,61 +842,60 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!136 &6274457472789276740
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8960763295320391903}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.04
-  m_Height: 0.3
-  m_Direction: 0
-  m_Center: {x: -0.01, y: 0, z: 0}
---- !u!114 &7601474565973744621
+--- !u!114 &996301177515713745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8960763295320391903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b57638a20c7965b4d9e3466ebd2390c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PickableItem
-  ItemIcon: {fileID: 2800000, guid: 382afe80a9c371c48801da98bd517dc4, type: 3}
-  WorkingPosition: {x: 0.202, y: -0.03, z: 0.468}
-  ActiveComponent: {fileID: 6753691353588316856}
-  Parent: {fileID: 0}
-  clueForPlayer: '''Now I can go through the dark.'''
-  repeatClue: '''I should use the flashlight to find the next door.'''
---- !u!114 &2423779263152668258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8960763295320391903}
+  m_GameObject: {fileID: 8872428716370999354}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b976387fb7b17f41b7a87c9d9205b5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquippableItem
   EquippedType: 1
---- !u!114 &6753691353588316856
+--- !u!1 &8960763295320391903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2072280217375148306}
+  - component: {fileID: 829663702457411167}
+  - component: {fileID: 6351886015498205557}
+  m_Layer: 10
+  m_Name: FlashLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2072280217375148306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960763295320391903}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 890814154846309436}
+  - {fileID: 4935409587449292096}
+  - {fileID: 2285069849442197018}
+  - {fileID: 5476075718452343062}
+  - {fileID: 3762285650810210214}
+  - {fileID: 3134596815385164087}
+  - {fileID: 8655238982960982075}
+  m_Father: {fileID: 6566912806961117970}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &829663702457411167
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -949,3 +909,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UseFlashlight
   animator: {fileID: 6351886015498205557}
   canSwitch: 1
+--- !u!95 &6351886015498205557
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960763295320391903}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 67e9801eb909f0f46bb62234be4c3e69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
