@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2397275432312620920}
   m_Layer: 0
-  m_Name: "Ba\xF1o 1"
+  m_Name: "Ba\xF1o 2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2476,7 +2476,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: b78340616c84b9e449320feab2518918, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: be8f51e2d5f125740aaa8ae79ee8e507, type: 2}
+      objectReference: {fileID: 2100000, guid: a10dc3ad82263de40b3ce7cce3b2c5f4, type: 2}
     - target: {fileID: 919132149155446097, guid: b78340616c84b9e449320feab2518918, type: 3}
       propertyPath: m_Name
       value: "ManijaPuertaBa\xF1o"
@@ -4938,7 +4938,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6aebaf1210d3c754f8bcef25224d942b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: be8f51e2d5f125740aaa8ae79ee8e507, type: 2}
+      objectReference: {fileID: 2100000, guid: a10dc3ad82263de40b3ce7cce3b2c5f4, type: 2}
     - target: {fileID: 919132149155446097, guid: 6aebaf1210d3c754f8bcef25224d942b, type: 3}
       propertyPath: m_Name
       value: "Puerta_Ba\xF1o"
