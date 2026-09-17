@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dc7a144d3bbefb74d8ec8d86d785dd7a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 24100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Data/Default/Mixers/DefaultMaster.mixer
+  uploadId: 984388

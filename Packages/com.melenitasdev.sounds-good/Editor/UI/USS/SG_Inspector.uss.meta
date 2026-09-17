@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: bed7e7e154009e84896a1c5bcbd553bd
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 12385, guid: 0000000000000000e000000000000000, type: 0}
+  disableValidation: 0
+  unsupportedSelectorAction: 0
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Editor/UI/USS/SG_Inspector.uss
+  uploadId: 984388

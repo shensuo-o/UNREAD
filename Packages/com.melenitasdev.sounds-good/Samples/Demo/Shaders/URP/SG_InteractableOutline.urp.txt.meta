@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ef3192a18cf26134a92e6ca67eca2d8a
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Shaders/URP/SG_InteractableOutline.urp.txt
+  uploadId: 984388

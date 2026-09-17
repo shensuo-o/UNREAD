@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a47fc6d47cf498f438b233a395178f85
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Prefabs/UI/Output Volume
+    Slider.prefab
+  uploadId: 984388

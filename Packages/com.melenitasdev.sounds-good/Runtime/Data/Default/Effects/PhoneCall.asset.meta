@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 437e4add7073fe35c7470f3f40fe5da7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Data/Default/Effects/PhoneCall.asset
+  uploadId: 984388

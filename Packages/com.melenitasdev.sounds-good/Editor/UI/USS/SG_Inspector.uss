@@ -1,0 +1,31 @@
+/* Scoped to the Sounds Good component inspectors (root has the "sg-inspector" class).
+   Forces a single, consistent label column so the SG_ custom controls line up with the
+   standard Unity fields (pseudo-enum popups, Vector2, color, UnityEvents, etc.). */
+
+.sg-inspector .sg-setting-row__title {
+    min-width: 140px;
+    flex-shrink: 0;
+    -unity-text-align: middle-left;
+}
+
+.sg-inspector .unity-base-field__label {
+    min-width: 140px;
+}
+
+/* Reset the empty labels of the Unity controls that live INSIDE the SG_ controls
+   (the SG_ control already provides its own title), so they don't add a second column. */
+.sg-inspector .sg-setting-row .unity-base-field__label {
+    min-width: 0;
+}
+
+/* Reset nested composite sub-labels (e.g. the X / Y of a Vector2 field) so they size
+   to their content instead of taking the full column width. */
+.sg-inspector .unity-base-field__input .unity-base-field__label {
+    min-width: 0;
+}
+
+/* Labels of numeric fields that support click-and-drag scrubbing, like Unity's own
+   serialized number fields. */
+.sg-scrub-label {
+    cursor: slide-arrow;
+}

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c8b47b13593748de9a391a1dd01e3731
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Shaders/SG_MusicZoneVisualizer.shader
+  uploadId: 984388

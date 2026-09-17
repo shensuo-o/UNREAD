@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e80280297e8ae449a198433d566f63, type: 3}
+  m_Name: Underwater
+  m_EditorClassIdentifier: SoundsGood.Domain::MelenitasDev.SoundsGood.Domain.AudioEffectPreset
+  <UseReverb>k__BackingField: 0
+  <ReverbPreset>k__BackingField: 1
+  <UseEcho>k__BackingField: 0
+  <EchoDelay>k__BackingField: 500
+  <EchoDecayRatio>k__BackingField: 0.5
+  <EchoWetMix>k__BackingField: 1
+  <EchoDryMix>k__BackingField: 1
+  <UseChorus>k__BackingField: 0
+  <ChorusDryMix>k__BackingField: 0.5
+  <ChorusWetMix1>k__BackingField: 0.5
+  <ChorusWetMix2>k__BackingField: 0.5
+  <ChorusWetMix3>k__BackingField: 0.5
+  <ChorusDelay>k__BackingField: 40
+  <ChorusRate>k__BackingField: 0.8
+  <ChorusDepth>k__BackingField: 0.03
+  <UseDistortion>k__BackingField: 1
+  <DistortionLevel>k__BackingField: 0.055
+  <UseLowPass>k__BackingField: 1
+  <LowPassCutoff>k__BackingField: 592
+  <LowPassResonance>k__BackingField: 1
+  <UseVolume>k__BackingField: 1
+  <Volume>k__BackingField: 0.492

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8b3d41f6c25e7a94db07f1c93a5e2d68
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Shaders/SG_Standard.shader
+  uploadId: 984388

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ceaf869dbaa9f8b4d8aae524871a5608
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Prefabs/UI/Controls Hints/ControlsItem.prefab
+  uploadId: 984388

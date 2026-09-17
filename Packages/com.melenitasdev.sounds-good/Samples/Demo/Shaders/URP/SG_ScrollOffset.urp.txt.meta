@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 80ddab1462f085f47ad074896e77d80f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Shaders/URP/SG_ScrollOffset.urp.txt
+  uploadId: 984388

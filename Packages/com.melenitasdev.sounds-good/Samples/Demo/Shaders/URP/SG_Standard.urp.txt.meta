@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 18518d52fdc09924296564c28ce69240
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Shaders/URP/SG_Standard.urp.txt
+  uploadId: 984388

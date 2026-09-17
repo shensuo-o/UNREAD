@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 881bb19335800c2448c4824f9e26141b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Scenes/SG_Demo3D
+    (with emitters)/LightingData.asset
+  uploadId: 984388

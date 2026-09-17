@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b41e45d448a561f45ae1d8cc888f4935
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Prefabs/UI/Controls Hints/NoiseF-Hint.prefab
+  uploadId: 984388

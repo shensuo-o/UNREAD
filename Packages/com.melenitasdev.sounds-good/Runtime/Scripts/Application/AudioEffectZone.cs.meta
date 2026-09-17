@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f3d741177efab614cb71eb54201b8516
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 49a3a730ce11c8f459b04c1be1c446e3, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Scripts/Application/AudioEffectZone.cs
+  uploadId: 984388

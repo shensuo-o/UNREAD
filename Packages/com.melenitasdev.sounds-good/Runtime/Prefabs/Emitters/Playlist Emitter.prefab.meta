@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8b2d5f93ea075046b13d8e029f6c4071
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Prefabs/Emitters/Playlist
+    Emitter.prefab
+  uploadId: 984388

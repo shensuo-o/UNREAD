@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8d4b62c0f17a495e8316de9c0a7b4e21
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Shaders/URP/SG_ParticleUnlit.urp.txt
+  uploadId: 984388

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 49457e89cdb7d814ca52cdc3fd14173d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Data/Default/Collections/DefaultMusicCollection.asset
+  uploadId: 984388

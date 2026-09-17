@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4292ed5bfa0c1f143ad5838867b17859
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Materials/Occlusion/Mat_Glass.mat
+  uploadId: 984388

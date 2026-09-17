@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4840ab39656d4f996f0fb914be0c3014
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Prefabs/Audio Trigger.prefab
+  uploadId: 984388

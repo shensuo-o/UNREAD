@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 18a1d37bbd7f4dd8960cd7ce818a332e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Scripts/Showcase
+    Level/Scene Flow/IShowcaseResettable.cs
+  uploadId: 984388

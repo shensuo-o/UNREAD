@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6399f8ec0dd6607409b52f4be1742d1f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Shaders/URP/SG_Triplanar.urp.txt
+  uploadId: 984388

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 90d9ff4f512119e449645fdc0fcfb5e0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: ee58f6ad6c6db22488fb54eae5450f5a, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Scripts/Application/AudioTrigger.cs
+  uploadId: 984388

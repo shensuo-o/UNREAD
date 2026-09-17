@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6d76f784126441f48919b93c99d374b5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 10f4ce77fdaffff42b3a3b208759b355, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Scripts/Application/OutputVolumeSlider.cs
+  uploadId: 984388

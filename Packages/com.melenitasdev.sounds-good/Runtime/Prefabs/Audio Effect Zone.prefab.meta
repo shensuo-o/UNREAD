@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c5a92e4b1d8f37e4a906b2c7f4e18d30
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Prefabs/Audio Effect Zone.prefab
+  uploadId: 984388

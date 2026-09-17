@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 534184664f4a4f08a340bf87b7e42cde
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Scripts/Showcase
+    Level/World Space UI/SG_WorldSpaceDropdownItemInteractable.cs
+  uploadId: 984388

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b1a6ab185d6e12e107a3001e6b9f8123
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Data/Default/OcclusionMaterials/Concrete.asset
+  uploadId: 984388

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 54109b669cf9cda47b24cf00c8dd919f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Materials/Prototype/Mat_SolidGrey.mat
+  uploadId: 984388

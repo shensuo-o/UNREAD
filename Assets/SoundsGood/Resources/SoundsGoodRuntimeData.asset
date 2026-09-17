@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23dce3dc4e2470d4eab1c76b9abd63bb, type: 3}
+  m_Name: SoundsGoodRuntimeData
+  m_EditorClassIdentifier: SoundsGood.Domain::MelenitasDev.SoundsGood.Domain.SoundsGoodRuntimeData
+  soundDataCollection: {fileID: 0}
+  musicDataCollection: {fileID: 0}
+  outputDataCollection: {fileID: 0}
+  effectDataCollection: {fileID: 0}
+  occlusionMaterialCollection: {fileID: 0}
+  masterAudioMixer: {fileID: 0}
+  sfxEnum: {fileID: 0}
+  tracksEnum: {fileID: 0}
+  outputsEnum: {fileID: 0}
+  effectsEnum: {fileID: 0}
+  occlusionMaterialsEnum: {fileID: 0}

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c63f28d52d4fddb4986834526955d91c
+timeCreated: 1484171803
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/TMPro/SG_LiberationSans
+    SDF.asset
+  uploadId: 984388

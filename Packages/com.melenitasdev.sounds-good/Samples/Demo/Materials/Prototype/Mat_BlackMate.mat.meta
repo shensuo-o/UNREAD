@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2f23808ef7e058d44a33017e40f3fc02
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Materials/Prototype/Mat_BlackMate.mat
+  uploadId: 984388

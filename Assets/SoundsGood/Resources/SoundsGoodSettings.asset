@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a44b69e5f6b4f90bad0edc853099d9e, type: 3}
+  m_Name: SoundsGoodSettings
+  m_EditorClassIdentifier: SoundsGood.Domain::MelenitasDev.SoundsGood.Domain.SoundsGoodSettings
+  <DataRootPath>k__BackingField: Assets/SoundsGood/Data/
+  <LastAppliedDataRootPath>k__BackingField: Assets/SoundsGood/Data/
+  <EnableOcclusion>k__BackingField: 1
+  <OcclusionLayers>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  <MaxDistance>k__BackingField: 50
+  <MinCutoff>k__BackingField: 1200
+  <MaxCutoff>k__BackingField: 22000
+  <MinVolumeMultiplier>k__BackingField: 0.25
+  <MaxOcclusionLayers>k__BackingField: 3
+  <ExtraDepthMinVolumeMultiplier>k__BackingField: 0.6
+  <ExtraDepthCutoffMultiplier>k__BackingField: 0.7
+  <MaxBounces>k__BackingField: 1
+  <BounceRadiusMin>k__BackingField: 1
+  <BounceRaysPerCircle>k__BackingField: 8
+  <CheckInterval>k__BackingField: 0.1
+  <LerpSpeed>k__BackingField: 10

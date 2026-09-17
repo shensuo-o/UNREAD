@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b541ede1395376d44be8f7fd350f77d4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Samples/Demo/Materials/Custom/Mat_MusicZoneVisualizer
+    1.mat
+  uploadId: 984388

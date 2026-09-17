@@ -1,0 +1,19 @@
+{
+    "name": "SoundsGood.Demo.InputSystem",
+    "rootNamespace": "MelenitasDev.SoundsGood.Demo",
+    "references": [
+        "SoundsGood.Demo",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "ENABLE_INPUT_SYSTEM"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

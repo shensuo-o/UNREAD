@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6abcc56d3909d081b49c279c24989fc2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Editor/Scripts/Drawers/OcclusionMaterialDrawer.cs
+  uploadId: 984388

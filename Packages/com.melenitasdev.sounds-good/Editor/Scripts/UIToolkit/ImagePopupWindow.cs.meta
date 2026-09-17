@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7a8fbad9af3ffba418c21a9685ef3fe8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Editor/Scripts/UIToolkit/ImagePopupWindow.cs
+  uploadId: 984388

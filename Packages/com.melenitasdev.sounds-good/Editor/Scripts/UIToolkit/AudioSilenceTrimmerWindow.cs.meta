@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 7b1e4d92c6a34f8ab0d5e13c7f92a648
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_ViewDataDictionary: {instanceID: 0}
+  - tree: {fileID: 9197481963319205126, guid: 3f9c2a71d8e04b1c9a5e7d40f26b8c13, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Editor/Scripts/UIToolkit/AudioSilenceTrimmerWindow.cs
+  uploadId: 984388

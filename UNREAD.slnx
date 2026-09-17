@@ -1,5 +1,11 @@
 ﻿<Solution>
+  <Project Path="SoundsGood.Demo.csproj" />
   <Project Path="Unity.RenderPipelines.Core.Samples.Runtime.csproj" />
+  <Project Path="SoundsGood.Application.csproj" />
+  <Project Path="SoundsGood.Domain.csproj" />
+  <Project Path="SoundsGood.Editor.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="SoundsGood.Demo.InputSystem.csproj" />
   <Project Path="Unity.RenderPipelines.Core.Samples.Editor.csproj" />
+  <Project Path="SoundsGood.SystemUtilities.csproj" />
 </Solution>

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c5ddd925cccf4e647b39b62eb2ccda5f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Editor/Scripts/GUI/QuickPrefabMenu.cs
+  uploadId: 984388

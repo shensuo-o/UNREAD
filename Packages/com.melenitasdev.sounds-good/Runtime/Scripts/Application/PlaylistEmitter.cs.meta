@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3e0a7c2b5d9f48e5c9b16e4f30a27d92
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 4aa0a92c0960f594f92bbaf37d957cfe, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Scripts/Application/PlaylistEmitter.cs
+  uploadId: 984388

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 2e387d96fc1371f4e91f45e14a86ec18
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Runtime/Scripts/Application/AudioEmitter.cs
+  uploadId: 984388

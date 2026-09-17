@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 73ffe6544e25ae44f9cee63127956a60
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266130
+  packageName: Sounds Good - Easy & Optimized Audio Manager
+  packageVersion: 2.2.2
+  assetPath: Packages/com.melenitasdev.sounds-good/Editor/Scripts/Drawers/DynamicMusicEmitterEditor.cs
+  uploadId: 984388
