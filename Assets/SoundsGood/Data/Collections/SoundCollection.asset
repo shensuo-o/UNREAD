@@ -34,3 +34,18 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 0961788c7173d654e8a664e31dd85b0b, type: 3}
     compressionPreset: 1
     forceToMono: 1
+  - tag: SWalking
+    clips:
+    - {fileID: 8300000, guid: 567282dd869763e4ba8ed927699b6634, type: 3}
+    compressionPreset: 1
+    forceToMono: 0
+  - tag: SRunning
+    clips:
+    - {fileID: 8300000, guid: 567282dd869763e4ba8ed927699b6634, type: 3}
+    compressionPreset: 1
+    forceToMono: 0
+  - tag: SJump
+    clips:
+    - {fileID: 8300000, guid: 83a344794bb5d7d4aa5f52e6153724cf, type: 3}
+    compressionPreset: 1
+    forceToMono: 0

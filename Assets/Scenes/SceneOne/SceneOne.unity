@@ -36798,6 +36798,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1877682438}
     - target: {fileID: 488176911080862527, guid: 15fb503ca69ef7f47817c3db1d792ff6, type: 3}
+      propertyPath: RunningSoundSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 488176911080862527, guid: 15fb503ca69ef7f47817c3db1d792ff6, type: 3}
       propertyPath: ShadowLayer.m_Bits
       value: 128
       objectReference: {fileID: 0}

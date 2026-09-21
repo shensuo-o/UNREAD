@@ -1,3 +1,4 @@
+using MelenitasDev.SoundsGood;
 using UnityEngine;
 
 public class Jugador : EntidadBase
@@ -76,6 +77,20 @@ public class Jugador : EntidadBase
 
     [Header("Animator")]
     [SerializeField] private Animator animator;
+
+    #endregion
+
+    #region Sounds
+    [Header("SoundsSpeed")]
+    [SerializeField] private float WalkingSoundSpeed = 1f;
+    [SerializeField] private float RunningSoundSpeed = 1f;
+
+    private Sound sWalking = new Sound(SFX.SWalking);
+    private Sound sRunning = new Sound(SFX.SRunning);
+    private Sound sJump = new Sound(SFX.SJump);
+
+    private bool wasWalking = false;
+    private bool wasRunning = false;
 
     #endregion
 
@@ -419,18 +434,34 @@ public class Jugador : EntidadBase
 
     #endregion
 
-    #region AnimationFunctions
+    #region Animation&SoundsFunctions
 
     private void UpdateAnimatorParams()
     {
         bool isMoving = Direction.magnitude > 0.1f;
-        bool isSprinting = Input.GetKey(KeyCode.LeftShift);
+        bool isSprinting = Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl);
         bool isCrouching = Input.GetKey(KeyCode.LeftControl);
 
-        animator.SetBool("Walking", isMoving && !isSprinting);
-        animator.SetBool("Running", isMoving && isSprinting);
+        bool isWalking = isMoving && !isSprinting;
+        bool isRunning = isMoving && isSprinting;
+
+        animator.SetBool("Walking", isWalking);
+        animator.SetBool("Running", isRunning);
         animator.SetBool("IsCrouch", isCrouching);
         animator.SetBool("Jump", !IsGrounded);
+
+        if (isWalking && !wasWalking)
+            sWalking.SetLoop(true).SetPitch(WalkingSoundSpeed).Play();
+        else if (!isWalking && wasWalking)
+            sWalking.Stop();
+
+        if (isRunning && !wasRunning)
+            sWalking.SetLoop(true).SetPitch(RunningSoundSpeed).Play();
+        else if (!isRunning && wasRunning)
+            sWalking.Stop();
+
+        wasWalking = isWalking;
+        wasRunning = isRunning;
     }
 
     #endregion
